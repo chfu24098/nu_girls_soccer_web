@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font Size */
+  --font-size: 16px;
+  
+  /* Colors - 赤・黒・青・白・灰色を基調（RGB形式） */
+  --color-primary: #DC143C;
+  --color-secondary: #1E90FF;       
+  --color-accent: #1a1a1a;            
+  --color-muted: #e5e5e5;         
+  --color-muted-foreground: #6b6b6b;
+  
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  /* Fonts */
+  --font-family-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif-jp: 'Noto Serif JP', ui-serif, serif;
+}
+
+@layer base {
+  html {
+    font-size: var(--font-size);
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(255 255 255);
+    color: rgb(26 26 26);
+  }
+
+  /* テキスト選択カラー - デフォルトは赤 */
+  ::selection {
+    background-color: rgb(var(--color-primary));
+    color: rgb(255 255 255);
+  }
+
+  /* 赤背景の要素では青で選択 */
+  .bg-primary ::selection,
+  .bg-red-500 ::selection,
+  .bg-red-600 ::selection,
+  [class*='bg-primary'] ::selection {
+    background-color: rgb(var(--color-secondary));
+    color: rgb(255 255 255);
+  }
+}
+
+/* 明朝体フォント（闘昇・挑戦と尊重用） */
+.font-serif-jp {
+  font-family: var(--font-family-serif-jp);
+}
