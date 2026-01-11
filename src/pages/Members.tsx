@@ -1,5 +1,6 @@
 import { ImageWithFallback } from "../components/ImageWithFallback";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { playersData, positionOrder, gradeOrder } from "../data/playersData";
 
 export function Members() {
@@ -68,9 +69,8 @@ export function Members() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3,ease: [0.4,0,0.2,1]}}
+      transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
     >
-      <section className="relative pt-[144px] pd-32 bg-gradient-to-br from-accent via-accent/90 to-black">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
@@ -186,16 +186,23 @@ export function Members() {
                 <h2 className="text-xl font-bold mb-4">{group.label}</h2>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                   {group.players.map((player) => (
-                    <div
+                    <motion.div
                       key={player.number}
-                      className="overflow-hidden transition-all group relative"
+                      className="overflow-hidden relative cursor-pointer"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                      onClick={() => {
+                        console.log(`Clicked player ${player.number}: ${player.name}`);
+                        window.location.href = `/members/${player.number}`;
+                      }}
                     >
                       <ImageWithFallback
                         src={player.image}
                         alt={player.name}
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto object-cover pointer-events-none"
                       />
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -203,16 +210,23 @@ export function Members() {
           ) : (
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {sortedPlayers.map((player) => (
-                <div
+                <motion.div
                   key={player.number}
-                  className="overflow-hidden transition-all group relative"
+                  className="overflow-hidden relative cursor-pointer"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                  onClick={() => {
+                    console.log(`Clicked player ${player.number}: ${player.name}`);
+                    window.location.href = `/members/${player.number}`;
+                  }}
                 >
                   <ImageWithFallback
                     src={player.image}
                     alt={player.name}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto object-cover pointer-events-none"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
@@ -258,7 +272,6 @@ export function Members() {
             </div>
           </div>
         </div>
-      </section>
       </section>
     </motion.div>
   );

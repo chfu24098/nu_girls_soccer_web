@@ -10,7 +10,7 @@ import { ScrollToTopButton } from "../components/ScrollToTopButton";
 
 export function Home() {
   return (
-    <div className="-mt-[72px]">
+    <div className="min-h-screen bg-white">      
       <Hero />
       <About />
       <Players />

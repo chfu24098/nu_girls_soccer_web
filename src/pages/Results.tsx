@@ -39,8 +39,7 @@ export function Results() {
   };
 
   return (
-    <div className="-mt-[72px]">
-      <section className="relative pt-[144px] pd-32 bg-gradient-to-br from-accent via-accent/90 to-black">
+    <div className="min-h-screen bg-white">     
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
@@ -253,7 +252,6 @@ export function Results() {
           </div>
         </section>
       )}
-      </section>
     </div>
   );
 }

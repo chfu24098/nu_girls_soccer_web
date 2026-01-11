@@ -3,23 +3,27 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { playersData } from "../data/playersData";
 import { ImageWithFallback } from "./ImageWithFallback";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Players() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const itemsPerPage = 3;
-  const maxIndex = Math.ceil(playersData.length / itemsPerPage) - 1;
+  const itemsPerPage = 3; // 表示数は3人のまま
+  const totalPlayers = playersData.length;
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? totalPlayers - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === totalPlayers - 1 ? 0 : prev + 1));
   };
 
-  const startIndex = currentIndex * itemsPerPage;
-  const visiblePlayers = playersData.slice(startIndex, startIndex + itemsPerPage);
+  // 3人表示するために、currentIndexから3人分取得（ループ対応）
+  const visiblePlayers = Array.from({ length: itemsPerPage }, (_, i) => {
+    const index = (currentIndex + i) % totalPlayers;
+    return playersData[index];
+  });
 
   return (
     <section id="players" className="py-20 bg-white">
@@ -46,16 +50,34 @@ export function Players() {
           </button>
 
           {/* プレイヤーグリッド */}
-          <div className="grid grid-cols-3 gap-4">
-            {visiblePlayers.map((player) => (
-              <div key={player.number} className="overflow-hidden transition-all group relative">
-                <ImageWithFallback
-                  src={player.image}
-                  alt={player.name}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-4 relative">
+            <AnimatePresence initial={false} mode="popLayout">
+              {visiblePlayers.map((player, index) => (
+                <motion.div
+                  key={`${player.number}-${currentIndex}`}
+                  initial={{ x: 400, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -400, opacity: 0 }}
+                  transition={{
+                    x: { 
+                      type: "spring", 
+                      stiffness: 200, 
+                      damping: 25,
+                      mass: 0.8
+                    },
+                    opacity: { duration: 0.3 }
+                  }}
+                  className="overflow-hidden transition-all group relative"
+                  layout
+                >
+                  <ImageWithFallback
+                    src={player.image}
+                    alt={player.name}
+                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
 
           {/* 右矢印 */}
@@ -68,7 +90,7 @@ export function Players() {
 
           {/* ドット */}
           <div className="flex justify-center gap-2 mt-6">
-            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            {Array.from({ length: totalPlayers }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
