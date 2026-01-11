@@ -63,7 +63,14 @@ export function Members() {
   const groupedPlayers = getGroupedPlayers();
 
   return (
-    <div className="pt-20">
+    <motion.div 
+      className="-mt-[72px]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3,ease: [0.4,0,0.2,1]}}
+    >
+      <section className="relative pt-[144px] pd-32 bg-gradient-to-br from-accent via-accent/90 to-black">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
@@ -252,6 +259,7 @@ export function Members() {
           </div>
         </div>
       </section>
-    </div>
+      </section>
+    </motion.div>
   );
 }

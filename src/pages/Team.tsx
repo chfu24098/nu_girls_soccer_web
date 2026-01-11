@@ -2,7 +2,8 @@ import { Target, Users, Trophy, Award, TrendingUp, Users2, Heart } from "lucide-
 
 export function Team() {
   return (
-    <div className="pt-20">
+    <div className="-mt-[72px]">
+      <section className="relative pt-[144px] pb-32 bg-gradient-to-br from-accent via-accent/90 to-black">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
@@ -341,6 +342,7 @@ export function Team() {
             </div>
           </div>
         </div>
+      </section>
       </section>
     </div>
   );

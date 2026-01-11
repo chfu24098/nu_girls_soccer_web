@@ -10,7 +10,7 @@ import { ScrollToTopButton } from "../components/ScrollToTopButton";
 
 export function Home() {
   return (
-    <>
+    <div className="-mt-[72px]">
       <Hero />
       <About />
       <Players />
@@ -20,6 +20,6 @@ export function Home() {
       <SocialLinks />
       <HomeAccess />
       <ScrollToTopButton />
-    </>
+    </div>
   );
 }

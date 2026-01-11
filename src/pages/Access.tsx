@@ -1,6 +1,7 @@
 export function Access() {
   return (
     <div className="min-h-screen bg-white">
+      <div className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
       {/* Hero Section */}
       <div className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
@@ -95,6 +96,7 @@ export function Access() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
