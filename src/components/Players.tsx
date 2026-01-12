@@ -7,15 +7,18 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function Players() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // 1: 次へ, -1: 前へ
 
   const itemsPerPage = 3; // 表示数は3人のまま
   const totalPlayers = playersData.length;
 
   const handlePrev = () => {
+    setDirection(-1);
     setCurrentIndex((prev) => (prev === 0 ? totalPlayers - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    setDirection(1);
     setCurrentIndex((prev) => (prev === totalPlayers - 1 ? 0 : prev + 1));
   };
 
@@ -50,33 +53,40 @@ export function Players() {
           </button>
 
           {/* プレイヤーグリッド */}
-          <div className="grid grid-cols-3 gap-4 relative">
-            <AnimatePresence initial={false} mode="popLayout">
-              {visiblePlayers.map((player, index) => (
-                <motion.div
-                  key={`${player.number}-${currentIndex}`}
-                  initial={{ x: 400, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: -400, opacity: 0 }}
-                  transition={{
-                    x: { 
-                      type: "spring", 
-                      stiffness: 200, 
-                      damping: 25,
-                      mass: 0.8
-                    },
-                    opacity: { duration: 0.3 }
-                  }}
-                  className="overflow-hidden transition-all group relative"
-                  layout
-                >
-                  <ImageWithFallback
-                    src={player.image}
-                    alt={player.name}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </motion.div>
-              ))}
+          <div className="overflow-hidden relative">
+            <AnimatePresence initial={false} mode="sync">
+              <motion.div
+                key={currentIndex}
+                initial={{ x: direction > 0 ? '100%' : '-100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: direction > 0 ? '-100%' : '100%' }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  mass: 1
+                }}
+                className="grid grid-cols-3 gap-4"
+              >
+                {visiblePlayers.map((player) => (
+                  <motion.div
+                    key={player.number}
+                    className="overflow-hidden transition-all group relative cursor-pointer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                    onClick={() => {
+                      window.location.href = `/members/${player.number}`;
+                    }}
+                  >
+                    <ImageWithFallback
+                      src={player.image}
+                      alt={player.name}
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
             </AnimatePresence>
           </div>
 

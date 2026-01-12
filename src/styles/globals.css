@@ -37,8 +37,8 @@
 
   /* テキスト選択カラー - デフォルトは赤 */
   ::selection {
-    background-color: rgb(var(--color-primary));
-    color: rgb(255 255 255);
+    background-color: var(--color-primary); /*(#DC143C)*/
+    color: #ffffff;
   }
 
   /* 赤背景の要素では青で選択 */
@@ -46,8 +46,8 @@
   .bg-red-500 ::selection,
   .bg-red-600 ::selection,
   [class*='bg-primary'] ::selection {
-    background-color: rgb(var(--color-secondary));
-    color: rgb(255 255 255);
+    background-color: var(--color-secondary); /*青(#1E90FF)*/
+    color: #ffffff;
   }
 }
 
