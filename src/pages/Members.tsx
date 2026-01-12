@@ -65,7 +65,7 @@ export function Members() {
 
   return (
     <motion.div 
-      className="-mt-[72px]"
+      className="min-h-screen bg-white"      
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
