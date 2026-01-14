@@ -38,7 +38,8 @@ export function MatchSchedule() {
   };
 
   return (
-    <div className="min-h-screen bg-white">      {/* Hero Section */}
+    <div className="min-h-screen bg-white">      
+    {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl text-white mb-6">
