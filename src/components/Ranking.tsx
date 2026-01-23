@@ -1,18 +1,7 @@
+import { rankingsData, type RankingTeam } from "../data/rankingsData";
+
 export function Ranking() {
-  const rankings = [
-    { rank: 1, team: "東洋大学", points: 50, matches: 22, wins: 16, draws: 2, losses: 4 },
-    { rank: 2, team: "神奈川大学", points: 42, matches: 22, wins: 12, draws: 6, losses: 4 },
-    { rank: 3, team: "十文字学園女子大学", points: 41, matches: 22, wins: 12, draws: 5, losses: 5 },
-    { rank: 4, team: "東京国際大学", points: 40, matches: 22, wins: 12, draws: 4, losses: 6 },
-    { rank: 5, team: "早稲田大学", points: 38, matches: 22, wins: 11, draws: 5, losses: 6 },
-    { rank: 6, team: "山梨学院大学", points: 37, matches: 22, wins: 12, draws: 1, losses: 3 },
-    { rank: 7, team: "日本大学", points: 35, matches: 22, wins: 11, draws: 2, losses: 9 },
-    { rank: 8, team: "日本体育大学", points: 34, matches: 22, wins: 10, draws: 4, losses: 8 },
-    { rank: 9, team: "帝京平成大学", points: 33, matches: 22, wins: 10, draws: 4, losses: 8 },
-    { rank: 10, team: "大東文化大学", points: 11, matches: 22, wins: 3, draws: 2, losses: 17 },
-    { rank: 11, team: "東海大学", points: 9, matches: 22, wins: 2, draws: 3, losses: 17 },
-    { rank: 12, team: "筑波大学", points: 6, matches: 22, wins: 1, draws: 3, losses: 18 },
-  ];
+  const rankings: RankingTeam[] = rankingsData;
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -31,62 +20,175 @@ export function Ranking() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="bg-primary rounded-t-lg overflow-hidden">
-            <div className="grid grid-cols-[70px_1fr_80px_80px_70px_70px_70px] gap-2 p-4 text-white text-center">
-              <div className="text-sm md:text-base">順位</div>
-              <div className="text-sm md:text-base text-left">チーム名</div>
-              <div className="text-sm md:text-base">勝点</div>
-              <div className="text-sm md:text-base">試合数</div>
-              <div className="text-sm md:text-base">勝</div>
-              <div className="text-sm md:text-base">分</div>
-              <div className="text-sm md:text-base">負</div>
+          {/* Desktop Version - 表示 (768px以上) */}
+          <div className="hidden md:block">
+            {/* Header */}
+            <div className="bg-primary rounded-t-lg overflow-hidden">
+              <div className="grid grid-cols-[70px_1fr_80px_80px_70px_70px_70px] gap-2 p-4 text-white text-center">
+                <div className="text-sm md:text-base">順位</div>
+                <div className="text-sm md:text-base text-left">チーム名</div>
+                <div className="text-sm md:text-base">勝点</div>
+                <div className="text-sm md:text-base">試合数</div>
+                <div className="text-sm md:text-base">勝</div>
+                <div className="text-sm md:text-base">分</div>
+                <div className="text-sm md:text-base">負</div>
+              </div>
+            </div>
+
+            {/* Table Body */}
+            <div className="bg-white rounded-b-lg overflow-hidden shadow-2xl">
+              {rankings.map((team, index) => (
+                <div
+                  key={team.rank}
+                  className={`grid grid-cols-[70px_1fr_80px_80px_70px_70px_70px] gap-2 p-4 border-b last:border-b-0 ${
+                    team.rank === 7
+                      ? "bg-primary/5 border-l-4 border-l-primary"
+                      : index % 2 === 0
+                      ? "bg-gray-50"
+                      : "bg-white"
+                  } hover:bg-secondary/5 transition-colors`}
+                >
+                  <div className="text-center flex items-center justify-center">
+                    <span
+                      className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${
+                        team.rank <= 3
+                          ? "bg-secondary text-white"
+                          : team.rank === 7
+                          ? "bg-primary text-white"
+                          : "bg-gray-200 text-gray-700"
+                      } text-sm md:text-base font-bold`}
+                    >
+                      {team.rank}
+                    </span>
+                  </div>
+                  <div className={`text-left flex items-center text-sm md:text-base ${
+                    team.rank === 7 ? "font-bold text-primary" : ""
+                  }`}>
+                    {/* エンブレム */}
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3 flex-shrink-0 shadow-md bg-white flex items-center justify-center">
+                      <img 
+                        src={team.emblemImage} 
+                        alt={`${team.team}エンブレム`}
+                        className="w-full h-full object-contain p-0.5"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const parent = e.currentTarget.parentElement;
+                          if (parent) {
+                            parent.innerHTML = '<span class="text-gray-400 text-xs font-bold">?</span>';
+                          }
+                        }}
+                      />
+                    </div>
+                    {team.team}
+                  </div>
+                  <div className="text-center flex items-center justify-center">
+                    <span className={`text-lg md:text-xl font-bold ${
+                      team.rank === 7 ? "text-primary" : "text-accent"
+                    }`}>{team.points}</span>
+                  </div>
+                  <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
+                    {team.matches}
+                  </div>
+                  <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
+                    {team.wins}
+                  </div>
+                  <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
+                    {team.draws}
+                  </div>
+                  <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
+                    {team.losses}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Table Body */}
-          <div className="bg-white rounded-b-lg overflow-hidden shadow-2xl">
-            {rankings.map((team, index) => (
+          {/* Mobile Version - カード形式 (767px以下) */}
+          <div className="md:hidden space-y-3">
+            {rankings.map((team) => (
               <div
                 key={team.rank}
-                className={`grid grid-cols-[70px_1fr_80px_80px_70px_70px_70px] gap-2 p-4 border-b last:border-b-0 ${
+                className={`rounded-lg overflow-hidden shadow-md ${
                   team.rank === 7
-                    ? "bg-accent/10 border-l-4 border-l-accent"
-                    : index % 2 === 0
-                    ? "bg-gray-50"
-                    : "bg-white"
-                } hover:bg-secondary/5 transition-colors`}
+                    ? "bg-white border-2 border-primary"
+                    : "bg-white border border-gray-200"
+                }`}
               >
-                <div className="text-center flex items-center justify-center">
-                  <span
-                    className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${
-                      team.rank <= 3
-                        ? "bg-secondary text-white"
-                        : team.rank === 7
-                        ? "bg-accent text-white"
-                        : "bg-gray-200 text-gray-700"
-                    } text-sm md:text-base`}
+                {/* Header */}
+                <div
+                  className={`px-3 py-2.5 flex items-center justify-between ${
+                    team.rank === 7
+                      ? "bg-primary"
+                      : team.rank <= 3
+                      ? "bg-secondary"
+                      : "bg-gray-100"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 min-w-0 flex-1">
+                    <span
+                      className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold flex-shrink-0 ${
+                        team.rank <= 3 || team.rank === 7
+                          ? "bg-white text-gray-900"
+                          : "bg-gray-300 text-gray-700"
+                      }`}
+                    >
+                      {team.rank}
+                    </span>
+                    {/* エンブレム */}
+                    <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 shadow-md bg-white flex items-center justify-center">
+                      <img 
+                        src={team.emblemImage} 
+                        alt={`${team.team}エンブレム`}
+                        className="w-full h-full object-contain p-0.5"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const parent = e.currentTarget.parentElement;
+                          if (parent) {
+                            parent.innerHTML = '<span class="text-gray-400 text-[10px] font-bold">?</span>';
+                          }
+                        }}
+                      />
+                    </div>
+                    <span
+                      className={`font-bold text-sm truncate ${
+                        team.rank <= 3 || team.rank === 7
+                          ? "text-white"
+                          : "text-gray-900"
+                      }`}
+                    >
+                      {team.team}
+                    </span>
+                  </div>
+                  <div
+                    className={`text-xl font-bold flex-shrink-0 ml-2 ${
+                      team.rank <= 3 || team.rank === 7
+                        ? "text-white"
+                        : "text-accent"
+                    }`}
                   >
-                    {team.rank}
-                  </span>
+                    {team.points}
+                    <span className="text-[10px] ml-0.5">pt</span>
+                  </div>
                 </div>
-                <div className="text-left flex items-center text-sm md:text-base">
-                  {team.team}
-                </div>
-                <div className="text-center flex items-center justify-center">
-                  <span className="text-accent text-lg md:text-xl">{team.points}</span>
-                </div>
-                <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
-                  {team.matches}
-                </div>
-                <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
-                  {team.wins}
-                </div>
-                <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
-                  {team.draws}
-                </div>
-                <div className="text-center flex items-center justify-center text-sm md:text-base text-muted-foreground">
-                  {team.losses}
+
+                {/* Stats */}
+                <div className="px-3 py-2.5 grid grid-cols-4 gap-1.5 text-center">
+                  <div>
+                    <div className="text-[10px] text-muted-foreground mb-0.5">試合</div>
+                    <div className="text-sm font-semibold">{team.matches}</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] text-muted-foreground mb-0.5">勝</div>
+                    <div className="text-sm font-semibold text-primary">{team.wins}</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] text-muted-foreground mb-0.5">分</div>
+                    <div className="text-sm font-semibold text-gray-600">{team.draws}</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] text-muted-foreground mb-0.5">負</div>
+                    <div className="text-sm font-semibold text-secondary">{team.losses}</div>
+                  </div>
                 </div>
               </div>
             ))}

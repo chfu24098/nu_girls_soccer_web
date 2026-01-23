@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const emblem = "/images/emblem/日大/背景なしN.png";
 
 export function Footer() {
+  const location = useLocation();
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "TEAM", href: "/team" },
@@ -37,7 +38,14 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link to={item.href} className="text-white/80 hover:text-white transition-colors">
+                  <Link 
+                    to={item.href} 
+                    className={`transition-colors ${
+                      location.pathname === item.href
+                        ? "text-primary"
+                        : "text-white hover:text-primary"
+                    }`}
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -60,6 +68,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center text-sm text-white/60">
           <p>© 2026 NU GIRLS SOCCER. すべての権利を保有しています。</p>
+          <p>© Photo(s) by Heitor Ryota Hashimoto </p>
         </div>
       </div>
     </footer>

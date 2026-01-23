@@ -9,12 +9,16 @@ export const emblems = {
   hachiojiLadies: "/images/emblem/都リーグ/八王子レディース.jpg",
   seijoDai: "/images/emblem/都リーグ/成城大学.png",
   fcSerum: "/images/emblem/都リーグ/FCSERUM.png",
-  daitoDai: "/images/emblem/関東大学女子サッカーリーグ/大東文化大学.png",
   inacKobe: "/images/emblem/INAC神戸.png",
   okayamaYugo: "/images/emblem/岡山湯郷.png",
-  kanagawaDai: "/images/emblem/関東大学女子サッカーリーグ/神奈川大学.png",
-  wasedaDai: "/images/emblem/関東大学女子サッカーリーグ/早稲田大学.png",
-  tokyoalmi:"/images/emblem/都リーグ東京アルミテス.png",
+  wasedaDai: "/images/emblem/関東大学女子サッカーリーグ/早稲田.png",
+  tokyoalmi:"/images/emblem/都リーグ/東京アルミテス.png",
   daitodai:"/images/emblem/関東大学女子サッカーリーグ/大東.png",
-  kanagawadai:"/images/emblem/関東大学女子サッカーリーグ/神大.png"
+  kanagawadai:"/images/emblem/関東大学女子サッカーリーグ/神大.png",
+  nichidai:"images/emblem/日大/背景なしN.png",
+  tukuba:"/images/emblem/関東大学女子サッカーリーグ/筑波.png",
+  teihei:"/images/emblem/関東大学女子サッカーリーグ/帝平.png",
+  toyo:"/images/emblem/関東大学女子サッカーリーグ/東洋.png",
+  nittai:"/images/emblem/関東大学女子サッカーリーグ/日体.png",
+  tokai:"images/emblem/関東大学女子サッカーリーグ/東海.png"
 };

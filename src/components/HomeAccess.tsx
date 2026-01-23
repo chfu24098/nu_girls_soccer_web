@@ -92,7 +92,7 @@ export function HomeAccess() {
           <div className="mt-12 text-center">
             <Link
               to="/access"
-              className="inline-block px-8 py-3 bg-primary hover:bg-secondary text-white font-['Montserrat',sans-serif] transition-colors"
+              className="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors inline-block"
             >
               VIEW DETAIL
             </Link>

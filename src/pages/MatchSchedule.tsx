@@ -1,3 +1,4 @@
+import { SEO } from "../components/SEO";
 import { MapPin, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef } from "react";
 import { schedulesData } from "../data/schedulesData";
@@ -38,9 +39,15 @@ export function MatchSchedule() {
   };
 
   return (
+    <>
+    <SEO
+      title="MATCH SCHEDULE"
+      description="NU GIRLS SOCCERの試合スケジュール。関東大学女子サッカーリーグ、Blossom League、東京都女子サッカーリーグなどの試合日程を掲載。"
+      keywords="試合スケジュール,日程,関東大学女子サッカーリーグ,試合予定,日本大学女子サッカー部"
+    />
     <div className="min-h-screen bg-white">      
     {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl text-white mb-6">
             <span className="text-primary">MATCH SCHEDULE</span>
@@ -203,5 +210,6 @@ export function MatchSchedule() {
         </section>
       )}
     </div>
+    </>
   );
 }

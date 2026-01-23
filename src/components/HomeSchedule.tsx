@@ -100,7 +100,7 @@ export function HomeSchedule() {
           {leagues.map((league, leagueIndex) => (
             <div key={leagueIndex} className="space-y-4">
               {(activeTab === "schedule" && league.schedule.length === 0) || 
-               (activeTab === "results" && league.results.length === 0) ? (
+              (activeTab === "results" && league.results.length === 0) ? (
                 <div className="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-gray-400">
                   {/* Header - League Name */}
                   <div className="bg-gray-400 px-4 py-3 text-center">

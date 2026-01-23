@@ -47,7 +47,53 @@ export function SocialLinks() {
           <p className="text-lg text-white/70 max-w-2xl mx-auto">公式SNSアカウント</p>
         </div>
 
-        <div className="flex justify-center items-center gap-8 md:gap-12">
+        {/* Grid Layout: 2列（上に2つ、下に3つ） */}
+        <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-6 sm:hidden">
+          {/* 上段2つ */}
+          {socialLinks.slice(0, 2).map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-transform hover:scale-110 duration-300 flex justify-center"
+              aria-label={social.name}
+            >
+              <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/30 transition-shadow duration-300">
+                <img
+                  src={social.icon}
+                  alt={`${social.name} icon`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        {/* 下段3つ（中央揃え） */}
+        <div className="grid grid-cols-3 gap-6 max-w-md mx-auto sm:hidden">
+          {socialLinks.slice(2).map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-transform hover:scale-110 duration-300 flex justify-center"
+              aria-label={social.name}
+            >
+              <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/30 transition-shadow duration-300">
+                <img
+                  src={social.icon}
+                  alt={`${social.name} icon`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Tablet/Desktop: 1行に全て表示 */}
+        <div className="hidden sm:flex justify-center items-center gap-6 md:gap-8 lg:gap-12">
           {socialLinks.map((social) => (
             <a
               key={social.name}
@@ -57,7 +103,7 @@ export function SocialLinks() {
               className="group transition-transform hover:scale-110 duration-300"
               aria-label={social.name}
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/30 transition-shadow duration-300">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/30 transition-shadow duration-300">
                 <img
                   src={social.icon}
                   alt={`${social.name} icon`}

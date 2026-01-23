@@ -1,8 +1,16 @@
+import { SEO } from "../components/SEO";
+
 export function Access() {
   return (
+     <>
+      <SEO
+        title="ACCESS"
+        description="NU GIRLS SOCCERの練習場・試合会場へのアクセス情報。スポーツ日大アスレティックパーク稲城サッカー場への行き方を掲載。"
+        keywords="アクセス,練習場,試合会場,稲城,スポーツ日大,日本大学女子サッカー部"
+      />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
+      <div className="relative pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl text-white mb-6">
             <span className="text-primary">ACCESS</span>
@@ -96,5 +104,6 @@ export function Access() {
         </div>
       </div>
     </div>
+    </>
   );
 }

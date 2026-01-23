@@ -1,13 +1,21 @@
-import { useParams, Link } from "react-router-dom";
+import { SEO } from "../components/SEO";
+import { StructuredData } from "../components/StructuredData";
+import { useParams } from "react-router"
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { playersData } from "../data/playersData";
-import { MemberIntro } from "../components/MemberIntro.tsx";
+import { MemberIntro } from "../components/MemberIntro";
 
 export function MemberDetail() {
   const { number } = useParams();
   const [showIntro, setShowIntro] = useState(true);
+
+  //デバッグ用ログ
+  console.log("MemberDetail rendered");
+  console.log("URL param number:",playersData.length);
+  console.log("playersData length:",playersData.length);
 
   // ページトップにスクロール
   useEffect(() => {
@@ -16,6 +24,9 @@ export function MemberDetail() {
   }, [number]);
 
   const player = playersData.find((p) => p.number === Number(number));
+
+  console.log("Found player:",player);
+  console.log("Searching for number:",Number(number));
 
   if (!player) {
     return (
@@ -32,6 +43,19 @@ export function MemberDetail() {
 
   return (
     <>
+    <SEO
+      title={`${player.name} - ${player.position} ${player.number}`}
+      description={`NU GIRLS SOCCER ${player.name}（${player.position} ${player.number}）の選手情報。${player.grade}、前所属：${player.previousTeam || '不明'}。${player.comment || ''}`}
+      keywords={`${player.name},${player.position},背番号${player.number},${player.grade},日本大学女子サッカー部`}
+    />
+    <StructuredData
+      type="Person"
+      name={player.name}
+      position={player.position}
+      number={player.number}
+      grade={player.grade}
+      image={player.image}
+    />
       {/* オープニングアニメーション */}
       <AnimatePresence>
         {showIntro && (
@@ -49,7 +73,7 @@ export function MemberDetail() {
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
         >
           {/* ヒーローセクション */}
-          <section className="relative pt-[144px] pb-8 bg-gradient-to-br from-accent via-accent/90 to-black overflow-hidden min-h-screen flex items-center">
+          <section className="relative pt-28 pb-8 md:pt-40 md:pb-12 bg-gradient-to-br from-accent via-accent/90 to-black overflow-hidden min-h-screen flex items-center">
             <div className="container mx-auto px-4 w-full">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -58,7 +82,7 @@ export function MemberDetail() {
               >
                 <Link
                   to="/members"
-                  className="inline-flex items-center gap-2 text-white hover:text-white/80 mb-6 transition-colors"
+                  className="inline-flex items-center gap-2 text-white hover:text-white/80 mb-2 transition-colors"
                 >
                   <ArrowLeft size={20} />
                   メンバー一覧に戻る
@@ -223,6 +247,38 @@ export function MemberDetail() {
                     </motion.div>
                   ))}
                 </div>
+                {/* カメラマンクレジット */}
+                <motion.div
+                  className="mt-8 text-center"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-md border border-gray-200">
+                    <p className="text-sm text-gray-600">
+                      Photo(s) by{" "}
+                      <a
+                        href="https://www.instagram.com/heitor_esporte?igsh=MXV4dTN0a21naW1taw%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-primary hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+                      >
+                        Heitor Ryota Hashimoto
+                      </a>
+                      {" "}(
+                      <a
+                        href="https://www.instagram.com/heitor_esporte?igsh=MXV4dTN0a21naW1taw%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary/80 transition-colors font-medium"
+                      >
+                        @heitor_esporte
+                      </a>
+                      )
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </motion.section>
           )}

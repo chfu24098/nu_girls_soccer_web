@@ -1,3 +1,4 @@
+import { SEO } from "../components/SEO";
 import { useState, useRef, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -69,9 +70,15 @@ export function NewsList() {
   }, [currentPage, selectedCategory, setSearchParams]);
 
   return (
-    <div className="min-h-screen bg-white">  
+    <>
+    <SEO
+      title="NEWS"
+      description="NU GIRLS SOCCERの最新ニュース、試合結果、お知らせを掲載。チームの活動情報をリアルタイムでお届けします。"
+      keywords="ニュース,試合結果,お知らせ,最新情報,日本大学女子サッカー部"
+    />
+      <div className="min-h-screen bg-white">  
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl text-white mb-6">
             <span className="text-primary">NEWS</span>
@@ -208,5 +215,5 @@ export function NewsList() {
         </section>
       )}
     </div>
-  );
-}
+    </>
+);}

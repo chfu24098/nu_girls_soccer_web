@@ -1,9 +1,19 @@
+import { SEO } from "../components/SEO";
+import { StructuredData } from "../components/StructuredData";
 import { Target, Users, Trophy, Award, TrendingUp, Users2, Heart } from "lucide-react";
 
 export function Team() {
   return (
-    <div className="min-h-screen bg-white">      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-accent via-accent/90 to-black">
+     <>
+      <SEO
+        title="TEAM"
+        description="NU GIRLS SOCCERのチーム理念とビジョン。「闘昇」をキャッチコピーに、挑戦と尊重の精神で活動しています。チームの歴史、目標、価値観をご紹介。"
+        keywords="チーム理念,ビジョン,闘昇,挑戦と尊重,チーム紹介,日本大学女子サッカー部"
+      />
+      <StructuredData type="SportsTeam" />
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-br from-accent via-accent/90 to-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl text-white mb-6">
             <span className="text-primary">TEAM</span>
@@ -28,13 +38,16 @@ export function Team() {
               </div>
             </div>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              日本大学女子サッカー部は2015年6月に創部され、関東大学女子サッカーリーグ2部からスタートしました。創部からわずか8年で全国大会インカレ3位という快挙を達成し、チーム史上最高順位を記録しています。
+              日本大学女子サッカー部は2015年6月に創部され、関東大学女子サッカーリーグ2部からスタートしました。
+              創部からわずか8年で全国大会インカレ3位という快挙を達成し、チーム史上最高順位を記録しています。
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              「闘昇」をスローガンに、「挑戦と尊重」という精神のもと、サッカーを楽しみながら勝利を目指すという姿勢を大切にしています。声を出す、ハードワーク、楽しむという三原則のもと、ピッチ内外で全力を尽くし、全国レベルで戦えるチームへと成長してきました。
+              「闘昇」をスローガンに、「挑戦と尊重」という精神のもと、サッカーを楽しみながら勝利を目指すという姿勢を大切にしています。
+              声を出す、ハードワーク、楽しむという三原則のもと、ピッチ内外で全力を尽くし、全国レベルで戦えるチームへと成長してきました。
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              チームからはWEリーグやなでしこリーグへ選手を輩出し、プロの世界で活躍する選手も誕生しています。メンバー一人ひとりが主体性を持ち、サッカーを通じて人間的にも成長できる環境を大切にしています。
+              チームからはWEリーグやなでしこリーグへ選手を輩出し、プロの世界で活躍する選手も誕生しています。
+              メンバー一人ひとりが主体性を持ち、サッカーを通じて人間的にも成長できる環境を大切にしています。
             </p>
           </div>
         </div>
@@ -59,7 +72,9 @@ export function Team() {
               </div>
               <h3 className="text-2xl mb-4">挑戦</h3>
               <p className="text-muted-foreground">
-                常に新しい目標に向かって挑戦し続ける勇気を持つ。失敗を恐れず、前進し続けることが成長への道。
+                常に新しい目標に向かって挑戦し続ける勇気を持つ。
+                <br />
+                失敗を恐れず、前進し続けることが成長への道。
               </p>
             </div>
 
@@ -69,7 +84,9 @@ export function Team() {
               </div>
               <h3 className="text-2xl mb-4">尊重</h3>
               <p className="text-muted-foreground">
-                チームメイト、対戦相手、審判、サポーターすべての人々を尊重する心を忘れない。
+                チームメイト、対戦相手、審判、サポーターすべての人々を
+                <br />
+                尊重する心を忘れない。
               </p>
             </div>
           </div>
@@ -208,6 +225,8 @@ export function Team() {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   チーム史上初となるWEリーグ（女子プロリーグ）やなでしこリーグへの選手輩出を実現。高い評価を受ける選手を送り出すことに成功しました。
+                  <br />
+                  以降2025-2026にも多数のWEリーグやなでしこリーグへ選手を輩出しました。
                 </p>
                 <div className="space-y-3">
                   <div className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary">
@@ -305,7 +324,9 @@ export function Team() {
                     サッカーを楽しみながら勝利を目指す
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    チームコンセプトとして「サッカーを楽しみながら勝利を目指す」という姿勢が大切にされています。楽しむことが力になり、その力が勝利へとつながると信じています。
+                    チームコンセプトとして「サッカーを楽しみながら勝利を目指す」という姿勢が大切にされています。
+                    <br />
+                    楽しむことが力になり、その力が勝利へとつながると信じています。
                   </p>
                 </div>
               </div>
@@ -319,7 +340,9 @@ export function Team() {
                     成長志向を持ち続ける
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    歴史は比較的浅いですが、成長志向を持ちながら全国で戦えるチームに育ってきています。一人ひとりが主体性を持ち、チーム全体で高め合う文化が根付いています。
+                    歴史は比較的浅いですが、成長志向を持ちながら全国で戦えるチームに育ってきています。
+                    <br />
+                    一人ひとりが主体性を持ち、チーム全体で高め合う文化が根付いています。
                   </p>
                 </div>
               </div>
@@ -333,7 +356,11 @@ export function Team() {
                     横と縦の絆が強いチーム
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    同学年の仲間同士はもちろん、先輩後輩の縦の関係も非常に良好です。学年を超えた絆がチームの一体感を生み出し、ピッチ内外で支え合う文化が育まれています。この良好な人間関係がチームの強さの土台となっています。
+                    同学年の仲間同士はもちろん、先輩後輩の縦の関係も非常に良好です。
+                    <br />
+                    学年を超えた絆がチームの一体感を生み出し、ピッチ内外で支え合う文化が育まれています。
+                    <br />
+                    この良好な人間関係がチームの強さの土台となっています。
                   </p>
                 </div>
               </div>
@@ -342,5 +369,6 @@ export function Team() {
         </div>
       </section>
     </div>
+    </>
   );
 }

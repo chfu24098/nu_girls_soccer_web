@@ -43,6 +43,12 @@ export const playersData: Player[] = [
     favoriteFood: "白ご飯、だし巻き卵、赤だしお味噌汁、無花果、ブルーベリー",
     favoritePlay: "パス",
     comment: "桜音って書いてさいおんって読みます。",
+    galleryImages: [
+      "/images/gallery/p1 (1).jpg",
+      "/images/gallery/p1 (2).jpg",
+      "/images/gallery/p1 (3).jpg",
+      "/images/gallery/p1 (4).jpg",
+    ],
   },
   {
     number: 2,
@@ -59,6 +65,12 @@ export const playersData: Player[] = [
     favoriteFood: "お寿司🍣",
     favoritePlay: "相手の逆をつくプレー",
     comment: "残りのサッカー人生楽しみます",
+    galleryImages: [
+      "/images/gallery/p2 (1).jpg",
+      "/images/gallery/p2 (2).jpg",
+      "/images/gallery/p2 (3).jpg",
+      "/images/gallery/p2 (4).jpg",
+    ],
   },
   {
     number: 3,
@@ -75,6 +87,12 @@ export const playersData: Player[] = [
     favoriteFood: "年中アボカド！  冬は暖かい飲み物",
     favoritePlay: "目指しているのは、観る人を沸かせるプレー",
     comment: "得点に繋がるクロスをたくさん上げて楽しみながらプレーしたいです！！",
+    galleryImages: [
+      "/images/gallery/p3 (1).jpg",
+      "/images/gallery/p3 (2).jpg",
+      "/images/gallery/p3 (3).jpg",
+      "/images/gallery/p3 (4).jpg",
+    ],
   },
   {
     number: 4,
@@ -91,6 +109,12 @@ export const playersData: Player[] = [
     favoriteFood: "おこめ",
     favoritePlay: "縦突破",
     comment: "チームを救える決定力のある選手になります🌟",
+    galleryImages: [
+      "/images/gallery/p4 (1).jpg",
+      "/images/gallery/p4 (2).jpg",
+      "/images/gallery/p4 (3).jpg",
+      "/images/gallery/p4 (4).jpg",
+    ],
   },
   {
     number: 6,
@@ -107,6 +131,12 @@ export const playersData: Player[] = [
     favoriteFood: "メロン",
     favoritePlay: "スルーパス",
     comment: "サッカー一生大好き",
+    galleryImages: [
+      "/images/gallery/p6 (1).jpg",
+      "/images/gallery/p6 (2).jpg",
+      "/images/gallery/p6 (3).jpg",
+      "/images/gallery/p6 (4).jpg",
+    ],
   },
   {
     number: 7,
@@ -123,6 +153,12 @@ export const playersData: Player[] = [
     favoriteFood: "ゼリー",
     favoritePlay: "１VS１の守備でボールを取った時",
     comment: "自信を持ってプレーできるように頑張る",
+    galleryImages: [
+      "/images/gallery/p7 (1).jpg",
+      "/images/gallery/p7 (2).jpg",
+      "/images/gallery/p7 (3).jpg",
+      "/images/gallery/p7 (4).jpg",
+    ],
   },
   {
     number: 8,
@@ -139,6 +175,12 @@ export const playersData: Player[] = [
     favoriteFood: "ハンバーグ",
     favoritePlay: "見ててワクワクするようなドラブラーになりたい。",
     comment: "飛躍",
+    galleryImages: [
+      "/images/gallery/p8 (1).jpg",
+      "/images/gallery/p8 (2).jpg",
+      "/images/gallery/p8 (3).jpg",
+      "/images/gallery/p8 (4).jpg",
+    ],
   },
   {
     number: 9,
@@ -155,6 +197,12 @@ export const playersData: Player[] = [
     favoriteFood: "カステラ、バナナ",
     favoritePlay: "得意なプレーは裏への抜け出し、スルーパス",
     comment: "よろしくお願いします。",
+    galleryImages: [
+      "/images/gallery/p9 (1).jpg",
+      "/images/gallery/p9 (2).jpg",
+      "/images/gallery/p9 (3).jpg",
+      "/images/gallery/p9 (4).jpg",
+    ],
   },
   {
     number: 10,
@@ -171,6 +219,12 @@ export const playersData: Player[] = [
     favoriteFood: "年中ガリガリくん",
     favoritePlay: "バズーカシュート",
     comment: "頑張ります！",
+    galleryImages: [
+      "/images/gallery/p10 (1).jpg",
+      "/images/gallery/p10 (2).jpg",
+      "/images/gallery/p10 (3).jpg",
+      "/images/gallery/p10 (4).jpg",
+    ],
   },
   {
     number: 11,
@@ -187,6 +241,12 @@ export const playersData: Player[] = [
     favoriteFood: "パン",
     favoritePlay: "ダイレクトパス、クロス、シュート",
     comment: "チームのために貢献できるよう頑張ります。",
+    galleryImages: [
+      "/images/gallery/p11 (1).jpg",
+      "/images/gallery/p11 (2).jpg",
+      "/images/gallery/p11 (3).jpg",
+      "/images/gallery/p11 (4).jpg",
+    ],
   },
   {
     number: 13,
@@ -203,6 +263,12 @@ export const playersData: Player[] = [
     favoriteFood: "バナナ",
     favoritePlay: "状況判断",
     comment: "楽しんでプレーします！",
+    galleryImages: [
+      "/images/gallery/p13 (1).jpg",
+      "/images/gallery/p13 (2).jpg",
+      "/images/gallery/p13 (3).jpg",
+      "/images/gallery/p13 (4).jpg",
+    ],
   },
   {
     number: 14,
@@ -219,6 +285,12 @@ export const playersData: Player[] = [
     favoriteFood: "フルーツ",
     favoritePlay: "ロングフィード、ノールックパス",
     comment: "自分らしく頑張ります",
+    galleryImages: [
+      "/images/gallery/p14 (1).jpg",
+      "/images/gallery/p14 (2).jpg",
+      "/images/gallery/p14 (3).jpg",
+      "/images/gallery/p14 (4).jpg",
+    ],
   },
   {
     number: 15,
@@ -235,6 +307,12 @@ export const playersData: Player[] = [
     favoriteFood: "アイスとフルーツ全般とトマト🍅",
     favoritePlay: "裏への抜け出しからチャンスを作ってゴールを決めるプレー",
     comment: "我武者羅に泥臭くゴールを目指し、チームの勝利に貢献できるよう頑張ります。",
+    galleryImages: [
+      "/images/gallery/p15 (1).jpg",
+      "/images/gallery/p15 (2).jpg",
+      "/images/gallery/p15 (3).jpg",
+      "/images/gallery/p15 (4).jpg",
+    ],
   },
   {
     number: 16,
@@ -251,6 +329,12 @@ export const playersData: Player[] = [
     favoriteFood: "駄菓子のじゃが塩バター",
     favoritePlay: "ダイナミックなセービングでチームを救うプレー",
     comment: "どのような状況でもチームをたせられる選手を目指して、これからも成長していきます！",
+    galleryImages: [
+      "/images/gallery/p16 (1).jpg",
+      "/images/gallery/p16 (2).jpg",
+      "/images/gallery/p16 (3).jpg",
+      "/images/gallery/p16 (4).jpg",
+    ],
   },
   {
     number: 17,
@@ -267,6 +351,12 @@ export const playersData: Player[] = [
     favoriteFood: "さつまいも、大福、筑前煮",
     favoritePlay: "マリーシア",
     comment: "愛する仲間のために全身全霊で闘う。",
+    galleryImages: [
+      "/images/gallery/p17 (1).jpg",
+      "/images/gallery/p17 (2).jpg",
+      "/images/gallery/p17 (3).jpg",
+      "/images/gallery/p17 (4).jpg",
+    ],
   },
   {
     number: 18,
@@ -283,6 +373,12 @@ export const playersData: Player[] = [
     favoriteFood: "バナナ",
     favoritePlay: "ロングシュート",
     comment: "どんな場面でも点を決められるようにする。",
+    galleryImages: [
+      "/images/gallery/p18 (1).jpg",
+      "/images/gallery/p18 (2).jpg",
+      "/images/gallery/p18 (3).jpg",
+      "/images/gallery/p18 (4).jpg",
+    ],
   },
   {
     number: 19,
@@ -299,6 +395,12 @@ export const playersData: Player[] = [
     favoriteFood: "肉",
     favoritePlay: "走る",
     comment: "頑張ります",
+    galleryImages: [
+      "/images/gallery/p19 (1).jpg",
+      "/images/gallery/p19 (2).jpg",
+      "/images/gallery/p19 (3).jpg",
+      "/images/gallery/p19 (4).jpg",
+    ],
   },
   {
     number: 20,
@@ -315,6 +417,12 @@ export const playersData: Player[] = [
     favoriteFood: "アイス",
     favoritePlay: "攻撃の中でスピードやリズムを変えて、相手の守備を崩すプレー",
     comment: "人として選手として成長する！！",
+    galleryImages: [
+      "/images/gallery/p20 (1).jpg",
+      "/images/gallery/p20 (2).jpg",
+      "/images/gallery/p20 (3).jpg",
+      "/images/gallery/p20 (4).jpg",
+    ],
   },
   {
     number: 21,
@@ -331,6 +439,12 @@ export const playersData: Player[] = [
     favoriteFood: "いちご🍓",
     favoritePlay: "安定したビルドアップを行いチームの攻撃に参加する。",
     comment: "ラスト1年日大のために勝利に貢献できるよう全力でプレーします。応援よろしくお願いします！",
+    galleryImages: [
+      "/images/gallery/p21 (1).jpg",
+      "/images/gallery/p21 (2).jpg",
+      "/images/gallery/p21 (3).jpg",
+      "/images/gallery/p21 (4).jpg",
+    ],
   },
   {
     number: 22,
@@ -347,6 +461,12 @@ export const playersData: Player[] = [
     favoriteFood: "オレンジ",
     favoritePlay: "カットイン",
     comment: "得意なドリブルを活かしてチームに貢献できるように頑張ります！",
+    galleryImages: [
+      "/images/gallery/p22 (1).jpg",
+      "/images/gallery/p22 (2).jpg",
+      "/images/gallery/p22 (3).jpg",
+      "/images/gallery/p22 (4).jpg",
+    ],
   },
   {
     number: 23,
@@ -362,7 +482,13 @@ export const playersData: Player[] = [
     favoriteSong: "タマシイレボリューション／Superfly",
     favoriteFood: "オムライスとアイスとチョコが好きです",
     favoritePlay: "レイオフで崩せた時が好きです",
-    comment: "ふさきさん毎日大変そうなのにお疲れ様です！",
+    comment: "頑張ります！",
+    galleryImages: [
+      "/images/gallery/p23 (1).jpg",
+      "/images/gallery/p23 (2).jpg",
+      "/images/gallery/p23 (3).jpg",
+      "/images/gallery/p23 (4).jpg",
+    ],
   },
   {
     number: 24,
@@ -379,6 +505,12 @@ export const playersData: Player[] = [
     favoriteFood: "チョコレート",
     favoritePlay: "スピードを生かしたプレーが得意です。",
     comment: "得点に絡めるプレーをたくさんしていきたいです。",
+    galleryImages: [
+      "/images/gallery/p24 (1).jpg",
+      "/images/gallery/p24 (2).jpg",
+      "/images/gallery/p24 (3).jpg",
+      "/images/gallery/p24 (4).jpg",
+    ],
   },
   {
     number: 25,
@@ -395,6 +527,12 @@ export const playersData: Player[] = [
     favoriteFood: "豚汁、西田さんが連れていってくれるご飯",
     favoritePlay: "安定したプレーを目指しています",
     comment: "ラスト楽しむ！",
+    galleryImages: [
+      "/images/gallery/p25 (1).jpg",
+      "/images/gallery/p25 (2).jpg",
+      "/images/gallery/p25 (3).jpg",
+      "/images/gallery/p25 (4).jpg",
+    ],
   },
   {
     number: 26,
@@ -411,6 +549,12 @@ export const playersData: Player[] = [
     favoriteFood: "オムライス（圧倒的デミグラスソース派‼︎）",
     favoritePlay: "ヘディング",
     comment: "日大のゴール、体張って守ります！",
+    galleryImages: [
+      "/images/gallery/p26 (1).jpg",
+      "/images/gallery/p26 (2).jpg",
+      "/images/gallery/p26 (3).jpg",
+      "/images/gallery/p26 (4).jpg",
+    ],
   },
   {
     number: 27,
@@ -427,6 +571,12 @@ export const playersData: Player[] = [
     favoriteFood: "季節の果物",
     favoritePlay: "ロングフィード",
     comment: "サッカーを楽しみながら頑張ります！",
+    galleryImages: [
+      "/images/gallery/p27 (1).jpg",
+      "/images/gallery/p27 (2).jpg",
+      "/images/gallery/p27 (3).jpg",
+      "/images/gallery/p27 (4).jpg",
+    ],
   },
   {
     number: 28,
@@ -443,6 +593,12 @@ export const playersData: Player[] = [
     favoriteFood: "夏は塩分タブレット、冬はみかん",
     favoritePlay: "得意なプレーは、スピードに乗りながらボールを貰うなど攻撃面での積極的な加勢。目指しているプレーは、感覚に頼らない適切な判断と正確なプレー。",
     comment: "ポジション変更後も、自分の中の新たな可能性の発見とスキルアップを目指して日々努力していきたいです。",
+    galleryImages: [
+      "/images/gallery/p28 (1).jpg",
+      "/images/gallery/p28 (2).jpg",
+      "/images/gallery/p28 (3).jpg",
+      "/images/gallery/p28 (4).jpg",
+    ],
   },
   {
     number: 29,
@@ -459,6 +615,12 @@ export const playersData: Player[] = [
     favoriteFood: "茎わかめ！",
     favoritePlay: "スライディング",
     comment: "チームに貢献できるようなプレーができるように頑張ります！",
+    galleryImages: [
+      "/images/gallery/p29 (1).jpg",
+      "/images/gallery/p29 (2).jpg",
+      "/images/gallery/p29 (3).jpg",
+      "/images/gallery/p29 (4).jpg",
+    ],
   },
   {
     number: 31,
@@ -475,6 +637,12 @@ export const playersData: Player[] = [
     favoriteFood: "果物！",
     favoritePlay: "仲間を活かすプレー",
     comment: "サッカーができる喜びと感謝を、プレーで示します。",
+    galleryImages: [
+      "/images/gallery/p31 (1).jpg",
+      "/images/gallery/p31 (2).jpg",
+      "/images/gallery/p31 (3).jpg",
+      "/images/gallery/p31 (4).jpg",
+    ],
   },
   {
     number: 32,
@@ -491,6 +659,12 @@ export const playersData: Player[] = [
     favoriteFood: "アイス",
     favoritePlay: "ヘディング",
     comment: "自分らしく頑張ります✊🏻",
+    galleryImages: [
+      "/images/gallery/p32 (1).jpg",
+      "/images/gallery/p32 (2).jpg",
+      "/images/gallery/p32 (3).jpg",
+      "/images/gallery/p32 (4).jpg",
+    ],
   },
   {
     number: 33,
@@ -507,6 +681,12 @@ export const playersData: Player[] = [
     favoriteFood: "夏はアイス、冬は焼き芋",
     favoritePlay: "トラップ、パス",
     comment: "よろしくお願いします",
+    galleryImages: [
+      "/images/gallery/p33 (1).jpg",
+      "/images/gallery/p33 (2).jpg",
+      "/images/gallery/p33 (3).jpg",
+      "/images/gallery/p33 (4).jpg",
+    ],
   },
   {
     number: 34,
@@ -523,6 +703,12 @@ export const playersData: Player[] = [
     favoriteFood: "美味しいもの！！",
     favoritePlay: "守備と攻撃",
     comment: "栄光に近道なし！死ぬこと以外はかすり傷！！",
+    galleryImages: [
+      "/images/gallery/p34 (1).jpg",
+      "/images/gallery/p34 (2).jpg",
+      "/images/gallery/p34 (3).jpg",
+      "/images/gallery/p34 (4).jpg",
+    ],
   },
   {
     number: 35,
@@ -539,6 +725,12 @@ export const playersData: Player[] = [
     favoriteFood: "アイス",
     favoritePlay: "一対一",
     comment: "サッカーを全力で楽しみます！！",
+    galleryImages: [
+      "/images/gallery/p35 (1).jpg",
+      "/images/gallery/p35 (2).jpg",
+      "/images/gallery/p35 (3).jpg",
+      "/images/gallery/p35 (4).jpg",
+    ],
   },
   {
     number: 36,
@@ -555,12 +747,18 @@ export const playersData: Player[] = [
     favoriteFood: "ドーナッツ",
     favoritePlay: "ポストプレー",
     comment: "チームメイトの笑顔を増やせるよう、最後まで全力で戦い、チームの勝利に貢献します！",
+    galleryImages: [
+      "/images/gallery/p36 (1).jpg",
+      "/images/gallery/p36 (2).jpg",
+      "/images/gallery/p36 (3).jpg",
+      "/images/gallery/p36 (4).jpg",
+    ],
   },
   {
     number: 37,
     name: "笠村 凜",
     nameReading: "かさむら りん",
-    nameEn: "Kasahara Rin",
+    nameEn: "Kasamura Rin",
     position: "MF",
     grade: "3年",
     image: "/images/member/p37.png",
@@ -571,6 +769,12 @@ export const playersData: Player[] = [
     favoriteFood: "お肉かフレンチトースト",
     favoritePlay: "スピードを活かしたプレー",
     comment: "明るさと笑顔でチームに貢献します！",
+    galleryImages: [
+      "/images/gallery/p37 (1).jpg",
+      "/images/gallery/p37 (2).jpg",
+      "/images/gallery/p37 (3).jpg",
+      "/images/gallery/p37 (4).jpg",
+    ],
   },
   {
     number: 38,
@@ -580,9 +784,15 @@ export const playersData: Player[] = [
     position: "DF",
     grade: "3年",
     image: "/images/member/p38.png",
-    detailImage: "/images/member2/p38",
+    detailImage: "/images/member2/p38.png",
     previousTeam: "八千代松陰高校",
     department: "法学部",
+    galleryImages: [
+      "/images/gallery/p38 (1).jpg",
+      "/images/gallery/p38 (2).jpg",
+      "/images/gallery/p38 (3).jpg",
+      "/images/gallery/p38 (4).jpg",
+    ],
   },
   {
     number: 39,
@@ -592,6 +802,18 @@ export const playersData: Player[] = [
     grade: "2年",
     image: "/images/member/p39.png",
     detailImage: "/images/member2/p39.png",
+    previousTeam: "大阪学芸高校高校",
+    department: "商学部",
+    favoriteSong: "夢中/BEFIRST",
+    favoriteFood: "年中無休焼肉",
+    favoritePlay: "ビルドアップ",
+    comment: "安室ちゃんになれるよう頑張ります。",
+    galleryImages: [
+      "/images/gallery/p39 (1).jpg",
+      "/images/gallery/p39 (2).jpg",
+      "/images/gallery/p39 (3).jpg",
+      "/images/gallery/p39 (4).jpg",
+    ],
   },
   {
     number: 40,
@@ -608,6 +830,12 @@ export const playersData: Player[] = [
     favoriteFood: "甘いもの",
     favoritePlay: "得点に関わるプレー",
     comment: "日大らしい見ていて楽しいサッカーを体現できるように頑張ります。",
+    galleryImages: [
+      "/images/gallery/p40 (1).jpg",
+      "/images/gallery/p40 (2).jpg",
+      "/images/gallery/p40 (3).jpg",
+      "/images/gallery/p40 (4).jpg",
+    ],
   },
   {
     number: 41,
@@ -624,6 +852,12 @@ export const playersData: Player[] = [
     favoriteFood: "果物、スイーツ",
     favoritePlay: "シュートストップ",
     comment: "チーム1の高身長を活かして、日大のゴールを守ります！",
+    galleryImages: [
+      "/images/gallery/p41 (1).jpg",
+      "/images/gallery/p41 (2).jpg",
+      "/images/gallery/p41 (3).jpg",
+      "/images/gallery/p41 (4).jpg",
+    ],
   },
   {
     number: 42,
@@ -640,6 +874,12 @@ export const playersData: Player[] = [
     favoriteFood: "たい焼き",
     favoritePlay: "ライナー制のシュート・パス",
     comment: "チームに貢献できるように頑張ります！",
+    galleryImages: [
+      "/images/gallery/p42 (1).jpg",
+      "/images/gallery/p42 (2).jpg",
+      "/images/gallery/p42 (3).jpg",
+      "/images/gallery/p42 (4).jpg",
+    ],
   },
   {
     number: 43,
@@ -656,6 +896,12 @@ export const playersData: Player[] = [
     favoriteFood: "栃木の名産イチゴです",
     favoritePlay: "スピードを生かした推進力です！",
     comment: "日大の特徴であるパスサッカーを体現できるように頑張ります！",
+    galleryImages: [
+      "/images/gallery/p43 (1).jpg",
+      "/images/gallery/p43 (2).jpg",
+      "/images/gallery/p43 (3).jpg",
+      "/images/gallery/p43 (4).jpg",
+    ],
   },
   {
     number: 45,
@@ -671,12 +917,12 @@ export const playersData: Player[] = [
     favoriteSong: "日向坂４６/誰よりも高く飛べ",
     favoriteFood: "ガストのマヨコーンピザ",
     favoritePlay: "1対1のデュエル",
-    comment: "このWebサイトを作成しました。日大にない分野で活躍できるように頑張ります！",
+    comment: "このWebサイトを作成しました。日大に新たな風を吹かせられるよう頑張ります！",
     galleryImages: [
-      "/images/gallery/p45_1.jpg",
-      "/images/gallery/p45_2.jpg",
-      "/images/gallery/p45_3.jpg",
-      "/images/gallery/p45_4.jpg",
+      "/images/gallery/p45 (1).jpg",
+      "/images/gallery/p45 (2).jpg",
+      "/images/gallery/p45 (3).jpg",
+      "/images/gallery/p45 (4).jpg",
     ],
   },
   {
@@ -694,6 +940,12 @@ export const playersData: Player[] = [
     favoriteFood: "おやき",
     favoritePlay: "インターセプト",
     comment: "チームに良い影響を与えられる選手になります！",
+    galleryImages: [
+      "/images/gallery/p46 (1).jpg",
+      "/images/gallery/p46 (2).jpg",
+      "/images/gallery/p46 (3).jpg",
+      "/images/gallery/p46 (4).jpg",
+    ],
   },
   {
     number: 50,

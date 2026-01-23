@@ -16,10 +16,25 @@ export interface ResultMatch {
   pkScore?: string;
   result: MatchResult;
   isHome: boolean | null;
+  season: string;
 }
 
 // 試合結果データ
 export const resultsData: ResultMatch[] = [
+  {
+    date: "1/18",
+    dayOfWeek: "Sun.",
+    time: "16:30",
+    opponent: "東京アルミテス",
+    opponentEmblem: emblems.tokyoalmi,
+    location: "スポーツ日大アスレティックパーク稲城サッカー場",
+    type: "東京都女子サッカーリーグ一般2部",
+    category: "東京都女子サッカーリーグ一般2部",
+    score: "14-0",
+    result: "勝利",
+    isHome: true,
+    season: "2025",
+  },
   {
     date: "12/25",
     dayOfWeek: "Thu.",
@@ -32,6 +47,7 @@ export const resultsData: ResultMatch[] = [
     score: "0-3",
     result: "敗北",
     isHome: null,
+    season: "2025",
   },
   {
     date: "12/23",
@@ -45,8 +61,8 @@ export const resultsData: ResultMatch[] = [
     score: "7-0",
     result: "勝利",
     isHome: null,
+    season: "2025",
   },
-  // ... 残りのデータは同じ
   {
     date: "12/14",
     dayOfWeek: "Sun.",
@@ -59,6 +75,7 @@ export const resultsData: ResultMatch[] = [
     score: "11-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "12/13",
@@ -72,6 +89,7 @@ export const resultsData: ResultMatch[] = [
     score: "4-1",
     result: "勝利",
     isHome: false,
+    season: "2025",
   },
   {
     date: "12/7",
@@ -85,6 +103,7 @@ export const resultsData: ResultMatch[] = [
     score: "8-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "12/6",
@@ -99,6 +118,7 @@ export const resultsData: ResultMatch[] = [
     pkScore: "(1-4)",
     result: "敗北",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/30",
@@ -112,6 +132,7 @@ export const resultsData: ResultMatch[] = [
     score: "5-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/29",
@@ -125,6 +146,7 @@ export const resultsData: ResultMatch[] = [
     score: "10-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/23",
@@ -138,6 +160,7 @@ export const resultsData: ResultMatch[] = [
     score: "13-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/22",
@@ -151,6 +174,7 @@ export const resultsData: ResultMatch[] = [
     score: "11-1",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/16",
@@ -164,6 +188,7 @@ export const resultsData: ResultMatch[] = [
     score: "8-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "11/15",
@@ -177,6 +202,7 @@ export const resultsData: ResultMatch[] = [
     score: "0-5",
     result: "敗北",
     isHome: null,
+    season: "2025",
   },
   {
     date: "11/9",
@@ -190,6 +216,7 @@ export const resultsData: ResultMatch[] = [
     score: "2-0",
     result: "勝利",
     isHome: null,
+    season: "2025",
   },
   {
     date: "11/2",
@@ -203,6 +230,7 @@ export const resultsData: ResultMatch[] = [
     score: "4-1",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "10/19",
@@ -216,32 +244,35 @@ export const resultsData: ResultMatch[] = [
     score: "9-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "10/18",
     dayOfWeek: "Sat.",
     time: "13:00",
     opponent: "神奈川大学",
-    opponentEmblem: emblems.kanagawaDai,
+    opponentEmblem: emblems.kanagawadai,
     location: "スポーツ日大アスレティックパーク稲城サッカー場",
     type: "関東大学女子サッカーリーグ",
     category: "関東大学女子サッカーリーグ",
     score: "1-2",
     result: "敗北",
     isHome: true,
+    season: "2025",
   },
   {
     date: "10/12",
     dayOfWeek: "Sun.",
     time: "13:00",
     opponent: "大東文化大学",
-    opponentEmblem: emblems.daitoDai,
+    opponentEmblem: emblems.daitodai,
     location: "スポーツ日大アスレティックパーク稲城サッカー場",
     type: "関東大学女子サッカーリーグ",
     category: "関東大学女子サッカーリーグ",
     score: "3-0",
     result: "勝利",
     isHome: true,
+    season: "2025",
   },
   {
     date: "10/4",
@@ -255,5 +286,6 @@ export const resultsData: ResultMatch[] = [
     score: "4-3",
     result: "勝利",
     isHome: false,
+    season: "2025",
   },
 ];
