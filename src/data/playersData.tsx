@@ -328,7 +328,7 @@ export const playersData: Player[] = [
     favoriteSong: "じぶんROCK/ONE OK ROCK",
     favoriteFood: "駄菓子のじゃが塩バター",
     favoritePlay: "ダイナミックなセービングでチームを救うプレー",
-    comment: "どのような状況でもチームをたせられる選手を目指して、これからも成長していきます！",
+    comment: "どのような状況でもチームを勝たせられる選手を目指して、これからも成長していきます！",
     galleryImages: [
       "/images/gallery/p16 (1).jpg",
       "/images/gallery/p16 (2).jpg",
@@ -383,7 +383,7 @@ export const playersData: Player[] = [
   {
     number: 19,
     name: "大光 望結",
-    nameReading: "だいこう みゆ",
+    nameReading: "だいこう みゆう",
     nameEn: "Daiko Miyu",
     position: "DF",
     grade: "3年",
@@ -796,7 +796,7 @@ export const playersData: Player[] = [
   },
   {
     number: 39,
-    name: "白井 葉",
+    name: "白井 心葉",
     nameEn: "Shirai Cocoha",
     position: "DF",
     grade: "2年",
@@ -817,7 +817,7 @@ export const playersData: Player[] = [
   },
   {
     number: 40,
-    name: "濱田 若那",
+    name: "濵田 若那",
     nameReading: "はまだ わかな",
     nameEn: "Hamada Wakana",
     position: "MF",
