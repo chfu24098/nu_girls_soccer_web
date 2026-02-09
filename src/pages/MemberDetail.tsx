@@ -54,7 +54,7 @@ export function MemberDetail() {
       position={player.position}
       number={player.number}
       grade={player.grade}
-      image={player.image}
+      image={player.detailImage}//変更した
     />
       {/* オープニングアニメーション */}
       <AnimatePresence>

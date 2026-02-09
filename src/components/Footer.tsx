@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
-const emblem = "/images/emblem/日大/背景なしN.png";
+const emblem = "/images/emblem/日大/背景なしN.webp";
 
 export function Footer() {
   const location = useLocation();
@@ -67,6 +67,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-sm text-white/60">
+          <p>本サイトは日本大学女子サッカー部が運営しています。</p>
+          <p>本サイトの掲載記事・写真の無断転載を禁じます。</p>
           <p>© 2026 NU GIRLS SOCCER. すべての権利を保有しています。</p>
           <p>© Photo(s) by Heitor Ryota Hashimoto </p>
         </div>

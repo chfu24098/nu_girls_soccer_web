@@ -183,11 +183,22 @@ export function Team() {
                   </span>
                 </div>
                 <h3 className="text-2xl mb-3 font-['Montserrat',sans-serif] font-bold text-accent">
-                  インカレ ベスト4進出
+                  インカレ ベスト4進出 / 初のWEリーグ選手輩出
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   2年連続でインカレに出場し、ベスト4まで勝ち進む成果を出しました。全国レベルで勝負できるチームとしての存在感を確立し始めました。
+                  <br/>
+                  チーム史上初となるWEリーグ（女子プロリーグ）への選手輩出を実現。高い評価を受ける選手を送り出すことに成功しました。
                 </p>
+                <div className="bg-gradient-to-r from-primary/5 to-transparent p-4 rounded-lg border-l-4 border-primary">
+                  <div className="flex items-start gap-3">
+                    <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-bold text-primary mb-1">大沼 歩加選手</p>
+                      <p className="text-sm text-muted-foreground">ちふれASエルフェン埼玉（WEリーグ）</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* 2023 3位 */}
@@ -212,19 +223,19 @@ export function Team() {
                 </div>
               </div>
 
-              {/* 2024-2025 プロ選手輩出 */}
+              {/* 2023-2024 プロ選手輩出 */}
               <div className="relative pl-8 pb-0">
                 <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary border-4 border-white shadow-lg"></div>
                 <div className="mb-2">
                   <span className="inline-block px-4 py-1 bg-primary text-white rounded-full text-sm font-['Montserrat',sans-serif] font-bold">
-                    2024 - 2025
+                    2023 - 2024
                   </span>
                 </div>
                 <h3 className="text-2xl mb-3 font-['Montserrat',sans-serif] font-bold text-accent">
                   WE・なでしこ選手排出
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  チーム史上初となるWEリーグ（女子プロリーグ）やなでしこリーグへの選手輩出を実現。高い評価を受ける選手を送り出すことに成功しました。
+                  チーム史上2度目となるWEリーグ（女子プロリーグ）やなでしこリーグへの選手輩出を実現。高い評価を受ける選手を送り出すことに成功しました。
                   <br />
                   以降2025-2026にも多数のWEリーグやなでしこリーグへ選手を輩出しました。
                 </p>
@@ -233,7 +244,7 @@ export function Team() {
                     <div className="flex items-start gap-3">
                       <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-bold text-accent mb-1">渡邉 莉沙子選手（主将・FW）</p>
+                        <p className="font-bold text-accent mb-1">渡邉 莉沙子選手</p>
                         <p className="text-sm text-muted-foreground">三菱重工浦和レッズレディース内定（WEリーグ）</p>
                       </div>
                     </div>
@@ -252,7 +263,7 @@ export function Team() {
                       <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-bold text-accent mb-1">藤原 愛里選手</p>
-                        <p className="text-sm text-muted-foreground">なでしこリーグ1部所属</p>
+                        <p className="text-sm text-muted-foreground">スフィーダ世田谷FC（なでしこリーグ1部）</p>
                       </div>
                     </div>
                   </div>

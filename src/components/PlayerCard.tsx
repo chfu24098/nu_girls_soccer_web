@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { Player } from "../data/playersData";
 
-const emblem = "/images/emblem/日大/背景なしN.png";
+const emblem = "/images/emblem/日大/背景なしN.webp";
 
 interface PlayerCardProps {
   player: Player;

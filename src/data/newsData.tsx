@@ -1,17 +1,20 @@
-const nishinoSakiNoteImage = "/images/news/n1.jpg";
-const yamadaSaionTransferImage = "/images/news/n13.png";
-const kuboKanonNoteImage = "/images/news/n2.jpg";
-const takizawaMiyuuNoteImage = "/images/news/n3.jpg";
-const fukuiHiyoriNoteImage = "/images/news/n5.jpg";
-const toyamaRunaNoteImage = "/images/news/n4.jpg";
-const fujitaMoekaNoteImage = "/images/news/n6.jpg";
-const masuharaHarukaTransferImage = "/images/news/n7.jpg";
-const kimuraAiNoteImage = "/images/news/n8.jpg";
-const takedaManaNoteImage = "/images/news/n9.jpg";
-const yamadaSaionNoteImage = "/images/news/n10.jpg";
-const masuharaHarukaNoteImage = "/images/news/n11.jpg";
-const fujitaMoekaTransferImage = "/images/news/n12.jpg";
-const noImage = "/images/icon/noimage.png";
+const nishinoSakiNoteImage = "/images/news/n1.webp";
+const kuboKanonNoteImage = "/images/news/n2.webp";
+const takizawaMiyuuNoteImage = "/images/news/n3.webp";
+const toyamaRunaNoteImage = "/images/news/n4.webp";
+const fukuiHiyoriNoteImage = "/images/news/n5.webp";
+const fujitaMoekaNoteImage = "/images/news/n6.webp";
+const masuharaHarukaTransferImage = "/images/news/n7.webp";
+const kimuraAiNoteImage = "/images/news/n8.webp";
+
+const takedaManaNoteImage = "/images/news/n9.webp";
+const yamadaSaionNoteImage = "/images/news/n10.webp";
+const masuharaHarukaNoteImage = "/images/news/n11.webp";
+const fujitaMoekaTransferImage = "/images/news/n12.webp";
+const yamadaSaionTransferImage = "/images/news/n13.webp";
+
+const noImage = "/images/icon/noimage.webp";
+
 
 export interface NewsItem {
   id: number;

@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { Player } from "../data/playersData";
 
-const emblem = "/images/emblem/日大/背景なしN.png";
+const emblem = "/images/emblem/日大/背景なしN.webp";
 
 interface MemberIntroProps {
   player: Player;

@@ -10,7 +10,7 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
     setDidError(true)
   }
 
-  const { src, alt, style, className, ...rest } = props
+  const { src, alt, style, className, loading = "lazy", ...rest } = props
 
   return didError ? (
     <img 
@@ -18,10 +18,19 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
       alt={alt || "No image available"} 
       className={className} 
       style={style} 
+      loading={loading}
       {...rest} 
       data-original-url={src} 
     />
   ) : (
-    <img src={src} alt={alt} className={className} style={style} {...rest} onError={handleError} />
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className} 
+      style={style} 
+      loading={loading}
+      {...rest} 
+      onError={handleError} 
+    />
   )
 }

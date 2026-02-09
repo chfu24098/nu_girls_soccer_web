@@ -2,7 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const emblem = "/images/emblem/日大/背景なしN.png";
+const emblem = "/images/emblem/日大/背景なしN.webp";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

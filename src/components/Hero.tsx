@@ -1,7 +1,7 @@
 import { MessageCircle, PersonStanding, Smile } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const imgTeam1 = "/images/team/team_1.jpg";
+const imgTeam1 = "/images/team/team_1.webp";
 
 export function Hero() {
   return (

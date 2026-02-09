@@ -1,0 +1,26 @@
+{
+  "name": "NU GIRLS SOCCER - 日本大学女子サッカー部",
+  "short_name": "NU GIRLS SOCCER",
+  "description": "日本大学女子サッカー部の公式サイト。チームのキャッチコピーは「闘昇」。挑戦と尊重の精神で、声を出す・ハードワーク・楽しむという三原則のもと活動しています。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#DC143C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["sports", "education"],
+  "lang": "ja",
+  "dir": "ltr"
+}

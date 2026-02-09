@@ -10,12 +10,12 @@ export function News() {
     return dateB.getTime() - dateA.getTime();
   });
   
-  const latestNews = sortedNews.slice(0, 3);
+  const latestNews = sortedNews.slice(0, 4);
 
   return (
-    <section id="news" className="py-20 bg-white">
+    <section id="news" className="py-16 sm:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="inline-block">
             <h2 className="text-4xl md:text-5xl mb-4 relative">
               <span className="text-accent relative z-10">NEWS</span>
@@ -27,34 +27,35 @@ export function News() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         {/* スマホ版: 2x2グリッド、PC版: 横4列 */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6">
           {latestNews.map((item) => (
             <Link
               key={item.id}
               to={`/news/${item.id}`}
               className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <ImageWithFallback
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm text-muted-foreground">
+              <div className="p-3 sm:p-5">
+                <div className="flex flex-col sm:flez-col items-start sm:items-center gap1 sm:gap-2 mb-2 sm:mb-3">
+                  <span className="text-xs sm:text-sm text-muted-foreground">
                     {item.date}
                   </span>
-                  <span className="px-3 py-1 bg-primary text-white text-sm rounded-full">
+                  <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-primary text-white text-xs sm:text-sm rounded-full">
                     {item.category}
                   </span>
                 </div>
-                <h3 className="text-xl mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-lg lg:text-xl mb-2 sm:mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground mb-4">{item.excerpt}</p>
-                <span className="text-secondary hover:text-secondary/80 transition-colors inline-flex items-center gap-2">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-4">{item.excerpt}</p>
+                <span className="text-secondary hover:text-secondary/80 transition-colors inline-flex items-center gap-1 sm:gap-2">
                   続きを読む
                   <span>→</span>
                 </span>
@@ -63,10 +64,10 @@ export function News() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-10 sm:mt-12">
           <Link
             to="/news"
-            className="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors inline-block"
+            className="bg-primary hover:bg-secondary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-colors inline-block text-sm sm:text-base"
           >
             VIEW ALL
           </Link>

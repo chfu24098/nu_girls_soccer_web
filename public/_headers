@@ -1,0 +1,36 @@
+# すべてのページに適用されるヘッダー
+/*
+  # セキュリティヘッダー
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # キャッシュコントロール（HTML）
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 静的アセット（画像、フォント、CSS、JS）のキャッシュ
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# WebP画像のキャッシュ
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+# PNG/JPG画像のキャッシュ
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+# フォントのキャッシュ
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# SVGのキャッシュ
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
