@@ -13,6 +13,7 @@ const masuharaHarukaNoteImage = "/images/news/n11.webp";
 const fujitaMoekaTransferImage = "/images/news/n12.webp";
 const yamadaSaionTransferImage = "/images/news/n13.webp";
 
+const image38 = "/images/news/n38.webp";
 const noImage = "/images/icon/noimage.webp";
 
 
@@ -204,6 +205,21 @@ export const newsData: NewsItem[] = [
       応援宜しくお願い致します。
       
       <p>もえか頑張れ！！</p>
+    `,
+  },
+  {
+    id: 38,
+    date: "2026年3月7日",
+    category: "お知らせ",
+    title: "柴田　瞳全日本選抜メンバー選出のお知らせ",
+    excerpt: "背番号9番／柴田瞳（3年／ノジマステラ神奈川相模原ドゥーエ）の全日本大学女子選抜メンバーに選抜されましたのでお知らせいたします。",
+    image: image38,
+    content: `
+      <p>
+        2026年3月15日（日）にウェーブスタジアム刈谷にて開催される、「DENSO CUP SOCCER　第4回大学女子日韓（韓日）定期戦」において、
+      　弊部も#9柴田瞳（ノジマステラ神奈川相模原ドゥーエ）が全日本大学女子選抜メンバーに選抜されました！
+      　熱い応援よろしくお願いします！！🔥🔥
+      </p>
     `,
   },
   {
