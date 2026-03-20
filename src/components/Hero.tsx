@@ -20,10 +20,10 @@ export function Hero() {
         {/* 右側：コンテンツ */}
         <div className="absolute lg:relative inset-0 lg:inset-auto bg-black/80 lg:bg-black flex items-center justify-center px-6 lg:px-12">
           <div className="max-w-xl">
-            {/* 闘昇 */}
-            <div className="mt-16 mb-6 lg:mt-20">
-              <h1 className="font-serif-jp text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] leading-none mb-4 lg:mb-6">
-                <span className="text-primary">闘昇</span>
+            {/* 常勝×常笑 */}
+            <div className="mb-10 sm:mb-13 lg:mb-16">
+              <h1 className="font-serif-jp text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-3 sm:mb-4 lg:mb-6">
+                <span className="text-primary">常勝×常笑</span>
               </h1>
               <p className="font-serif-jp text-3xl sm:text-3xl md:text-4xl text-white mb-2 lg:mb-3 border-l-4 border-primary pl-4 lg:pl-4">
                 挑戦と尊重

@@ -16,7 +16,7 @@ interface SEOProps {
 
 export function SEO({
   title = "NU GIRLS SOCCER - 日本大学女子サッカー部",
-  description = "日本大学女子サッカー部の公式サイト。チームのキャッチコピーは「闘昇」。挑戦と尊重の精神で、声を出す・ハードワーク・楽しむという三原則のもと活動しています。",
+  description = "日本大学女子サッカー部の公式サイト。チームのキャッチコピーは「常勝×常笑」。挑戦と尊重の精神で、声を出す・ハードワーク・楽しむという三原則のもと活動しています。",
   keywords = "日本大学,女子サッカー部,NU GIRLS SOCCER,闘昇,大学サッカー,関東大学女子サッカー,日大,女子サッカー",
   ogImage,
   ogType = "website",

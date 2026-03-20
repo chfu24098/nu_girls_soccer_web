@@ -42,7 +42,7 @@ export function About() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             2015年創部、関東大学女子サッカーリーグ1部に所属。
             <br />
-            「闘昇」をスローガンに、”挑戦と尊重”の精神のもと、
+            「常勝×常笑」をスローガンに、”挑戦と尊重”の精神のもと、
             <br />
             声を出す・ハードワーク・楽しむという三原則を大切にしながら、
             <br />
