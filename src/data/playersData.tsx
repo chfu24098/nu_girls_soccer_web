@@ -100,7 +100,7 @@ export const playersData: Player[] = [
     position: "FW",
     grade: "2年",
     //image: "/images/member/p4.png",
-    detailImage: "/images/players/26p4.webp",
+    detailImage: "/images/players/p4.webp",
     previousTeam: "日本航空高校",
     department: "スポーツ科学部",
     favoriteSong: "幕が上がる / back number",
