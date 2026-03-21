@@ -5,10 +5,10 @@ const imgTeam1 = "/images/team/team_1.webp";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-0">
+    <section id="home" className="relative min-h-[120vh] flex items-center justify-center overflow-hidden pt-24 lg:pt-0">
       <div className="w-full h-full grid lg:grid-cols-2">
         {/* 左側：写真 */}
-        <div className="relative h-[600px] lg:h-full">
+        <div className="relative h-[600px] lg:h-full lg:min-h-[120vh]">
           <img
             src={imgTeam1}
             alt="Women's soccer team"
@@ -18,7 +18,7 @@ export function Hero() {
         </div>
 
         {/* 右側：コンテンツ */}
-        <div className="absolute lg:relative inset-0 lg:inset-auto bg-black/80 lg:bg-black flex items-center justify-center px-6 lg:px-12">
+        <div className="absolute lg:relative inset-0 lg:inset-auto bg-black/80 lg:bg-black flex items-center justify-center px-6 lg:px-12 pt-20 lg:pt-0">
           <div className="max-w-xl">
             {/* 常勝×常笑 */}
             <div className="mb-10 sm:mb-13 lg:mb-16">
