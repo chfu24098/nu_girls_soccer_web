@@ -35,12 +35,11 @@ export const playersData: Player[] = [
     nameEn: "Nakaya Otoha",
     position: "GP",
     grade: "4年",
-    //image: "/images/member/p21.png",
     detailImage: "/images/players/p1.webp",
     previousTeam: "常盤木学園高等学校",
     department: "商学部",
     favoriteSong: "Try Everything／SHAKIRA",
-    favoriteFood: "いちご🍓",
+    favoriteFood: "いちご",
     favoritePlay: "安定したビルドアップを行いチームの攻撃に参加する。",
     comment: "ラスト1年日大のために勝利に貢献できるよう全力でプレーします。応援よろしくお願いします！",
     galleryImages: [
