@@ -16,10 +16,6 @@ https://nu-girls-soccer.com/
 ---
 
 ## サイトイメージ
-※ここにスクリーンショットを掲載
-
-例
-
 - トップページ
 <img width="1920" height="1200" alt="Image" src="https://github.com/user-attachments/assets/d98427cc-85fc-4768-8df1-5ef756f29650" />
 
