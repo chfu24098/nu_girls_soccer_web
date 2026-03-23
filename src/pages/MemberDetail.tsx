@@ -11,22 +11,36 @@ import { MemberIntro } from "../components/MemberIntro";
 export function MemberDetail() {
   const { number } = useParams();
   const [showIntro, setShowIntro] = useState(true);
+  const [showPerformanceImage, setShowPerformanceImage] = useState(false);
 
   //デバッグ用ログ
   console.log("MemberDetail rendered");
-  console.log("URL param number:",playersData.length);
-  console.log("playersData length:",playersData.length);
+  console.log("URL param number:", number);
+  console.log("playersData length:", playersData.length);
 
   // ページトップにスクロール
   useEffect(() => {
     window.scrollTo(0, 0);
     setShowIntro(true);
+    setShowPerformanceImage(false);
   }, [number]);
 
   const player = playersData.find((p) => p.number === Number(number));
 
-  console.log("Found player:",player);
-  console.log("Searching for number:",Number(number));
+  console.log("Found player:", player);
+  console.log("Searching for number:", Number(number));
+
+  // 画像クリックハンドラー（performanceImageがある場合のみトグル）
+  const handleImageClick = () => {
+    if (player?.performanceImage) {
+      setShowPerformanceImage((prev) => !prev);
+    }
+  };
+
+  // 現在表示する画像を決定
+  const currentImage = showPerformanceImage && player?.performanceImage 
+    ? player.performanceImage 
+    : player?.detailImage;
 
   if (!player) {
     return (
@@ -54,7 +68,7 @@ export function MemberDetail() {
       position={player.position}
       number={player.number}
       grade={player.grade}
-      image={player.detailImage}//変更した
+      image={player.detailImage}
     />
       {/* オープニングアニメーション */}
       <AnimatePresence>
@@ -182,12 +196,27 @@ export function MemberDetail() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, delay: 0.4 }}
                 >
-                  <div className="relative overflow-hidden rounded-lg shadow-2xl bg-gray-100 w-full max-w-[340px] lg:max-w-[380px]">
-                    <img
-                      src={player.detailImage}
-                      alt={player.name}
-                      className="w-full h-auto object-cover"
-                    />
+                  <div 
+                    className={`relative overflow-hidden rounded-lg shadow-2xl bg-gray-100 w-full max-w-[340px] lg:max-w-[380px] ${
+                      player.performanceImage ? 'cursor-pointer' : ''
+                    }`}
+                    onClick={handleImageClick}
+                  >
+                    {/* 画像 */}
+                    <div className="relative aspect-[3/4]">
+                      <AnimatePresence mode="wait">
+                        <motion.img
+                          key={currentImage}
+                          src={currentImage}
+                          alt={player.name}
+                          className="w-full h-full object-cover absolute inset-0"
+                          initial={{ opacity: 0, rotateY: 90 }}
+                          animate={{ opacity: 1, rotateY: 0 }}
+                          exit={{ opacity: 0, rotateY: -90 }}
+                          transition={{ duration: 0.4 }}
+                        />
+                      </AnimatePresence>
+                    </div>
                   </div>
                 </motion.div>
               </div>
