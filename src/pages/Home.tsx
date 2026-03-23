@@ -10,6 +10,7 @@ import { HomeAccess } from "../components/HomeAccess";
 import { SocialLinks } from "../components/SocialLinks";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import { PhotographerCredit } from "../components/PhotographerCredit";
+import { Sponsor } from "../components/Sponsor";
 
         
 export function Home() {
@@ -17,7 +18,7 @@ export function Home() {
     <>
       <SEO
         title="NU GIRLS SOCCER - 日本大学女子サッカー部"
-        description="日本大学女子サッカー部の公式サイト。チームのキャッチコピーは「闘昇」。挑戦と尊重の精神で、声を出す・ハードワーク・楽しむという三原則のもと活動しています。試合結果、選手情報、スケジュールなどを掲載。"
+        description="日本大学女子サッカー部の公式サイト。チームのキャッチコピーは「常勝×常笑」。挑戦と尊重の精神で、声を出す・ハードワーク・楽しむという三原則のもと活動しています。試合結果、選手情報、スケジュールなどを掲載。"
         keywords="日本大学,女子サッカー部,NU GIRLS SOCCER,闘昇,大学サッカー,関東大学女子サッカー,日大,女子サッカー,試合結果,スケジュール"
       />
       <StructuredData type="SportsTeam" />
@@ -30,6 +31,7 @@ export function Home() {
         <News />
         <SocialLinks />
         <PhotographerCredit />
+        <Sponsor />
         <HomeAccess />
         <ScrollToTopButton /> 
       </div>
