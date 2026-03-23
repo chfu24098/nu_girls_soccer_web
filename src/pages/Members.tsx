@@ -1,7 +1,6 @@
 import { PlayerCard } from "../components/PlayerCard";
 import { SEO } from "../components/SEO";
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { playersData, positionOrder, gradeOrder } from "../data/playersData";
 import { staffData } from "../data/staffData";
