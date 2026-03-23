@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -57,16 +58,18 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-      <ScrollToTopButton /> 
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+        </div>
+        <ScrollToTopButton /> 
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
