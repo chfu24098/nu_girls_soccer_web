@@ -135,13 +135,21 @@ export function MatchSchedule() {
 
                   {/* Location and Home Badge */}
                   <div className="flex items-center justify-between gap-4">
-                    {/* Home Badge */}
-                    {match.isHome && (
-                      <span className="bg-primary text-white px-4 py-2 rounded text-sm font-semibold">
-                        HOME
-                      </span>
-                    )}
-                    {!match.isHome && <div></div>}
+                    
+                    
+                    {/* Home/Away Badge */}
+                      {match.isHome === true && (
+                        <span className="bg-primary text-white px-3 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm font-semibold">
+                          HOME
+                        </span>
+                      )}
+                      {match.isHome === false && (
+                        <span className="bg-white text-primary border-2 border-primary px-3 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm font-semibold">
+                          AWAY
+                        </span>
+                      )}
+                      {match.isHome === null && <div className="hidden sm:block"></div>}
+
                     
                     {/* Location */}
                     <div className="flex items-center gap-2 text-muted-foreground">
