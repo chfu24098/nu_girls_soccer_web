@@ -3,6 +3,7 @@ export const emblems = {
   jumonji: "/images/emblem/関東大学女子サッカーリーグ/十文字.webp",
   niigataKeie: "/images/emblem/新潟経営icon.webp",
   arawashi: "/images/emblem/都リーグ/慶應荒鷲.webp",
+  keio:  "/images/emblem/都リーグ/慶應荒鷲.webp",
   yamanashiGakuin: "/images/emblem/関東大学女子サッカーリーグ/山学.webp",
   tokyoKokusai: "/images/emblem/関東大学女子サッカーリーグ/東国.webp",
   tamaSoccer: "/images/emblem/都リーグ/多摩サッカークラブ.webp",
@@ -20,5 +21,7 @@ export const emblems = {
   teihei: "/images/emblem/関東大学女子サッカーリーグ/帝平.webp",
   toyo: "/images/emblem/関東大学女子サッカーリーグ/東洋.webp",
   nittai: "/images/emblem/関東大学女子サッカーリーグ/日体.webp",
-  tokai: "/images/emblem/関東大学女子サッカーリーグ/東海.webp"
+  tokai: "/images/emblem/関東大学女子サッカーリーグ/東海.webp",
+  kokushi :"images/emblem/関東大学女子サッカーリーグ/kokushi.webp",
+  junten: "images/emblem/関東大学女子サッカーリーグ/juntendo.webp"
 };
