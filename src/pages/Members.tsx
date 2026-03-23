@@ -1,8 +1,10 @@
+import { PlayerCard } from "../components/PlayerCard";
+import { SEO } from "../components/SEO";
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { playersData, positionOrder, gradeOrder } from "../data/playersData";
-import { SEO } from "../components/SEO";
-import { PlayerCard } from "../components/PlayerCard";
+import { staffData } from "../data/staffData";
 
 export function Members() {
   const [filterCategory, setFilterCategory] = useState<"ALL" | "POSITION" | "GRADE">("ALL");
@@ -72,7 +74,7 @@ export function Members() {
         keywords="メンバー,選手紹介,背番号,ポジション,学年,日本大学女子サッカー部"
       />
       <motion.div 
-        className="min-h-screen bg-white"     
+        className="-mt-[72px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -189,14 +191,14 @@ export function Members() {
           <div className="container mx-auto px-4">
             {groupedPlayers ? (
               groupedPlayers.map((group) => (
-                <div key={group.label} className="mb-10">
+                <div key={group.label} className="mb-16">
                   <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Montserrat',sans-serif] text-accent mb-3 inline-block relative">
-              {group.label}
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-            </h2>
-          </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Montserrat',sans-serif] text-accent mb-3 inline-block relative">
+                      {group.label}
+                      <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-[1400px] mx-auto">
                     {group.players.map((player) => (
                       <PlayerCard key={player.number} player={player} />
                     ))}
@@ -213,7 +215,7 @@ export function Members() {
           </div>
         </section>
 
-        {/* Staff Section */}
+       {/* Staff Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -227,29 +229,27 @@ export function Members() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">No Image</span>
+              {staffData.map((staff) => (
+                <div
+                  key={staff.id}
+                  className="text-center group"
+                >
+                  <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center group-hover:ring-4 group-hover:ring-primary/30 transition-all">
+                    <img
+                      src={staff.image}
+                      alt={staff.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // 画像読み込みエラー時のフォールバック
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<span class="text-gray-500 text-sm">No Image</span>';
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-xl mb-1 group-hover:text-primary transition-colors">{staff.name}</h3>
+                  <p className="text-muted-foreground">{staff.role}</p>
                 </div>
-                <h3 className="text-xl mb-1">佐藤 琴美</h3>
-                <p className="text-muted-foreground">監督</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">No Image</span>
-                </div>
-                <h3 className="text-xl mb-1">山本 義弘</h3>
-                <p className="text-muted-foreground">コーチ</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">No Image</span>
-                </div>
-                <h3 className="text-xl mb-1">野田 恭平</h3>
-                <p className="text-muted-foreground">GPコーチ</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
