@@ -57,10 +57,10 @@ export function Footer() {
             <h4 className="mb-4">練習日程</h4>
             <ul className="space-y-2 text-sm text-white/80">
               <li>月曜日: OFF</li>
-              <li>火曜日: 18:00 - 20:30</li>
-              <li>水曜日: 18:00 - 20:30</li>
-              <li>木曜日: 18:00 - 20:30</li>
-              <li>金曜日: 18:00 - 20:30</li>
+              <li>火曜日: 18:30 - 21:00</li>
+              <li>水曜日: 18:30 - 21:00</li>
+              <li>木曜日: 18:30 - 21:00</li>
+              <li>金曜日: 18:30 - 21:00</li>
               <li>土日: 変動</li>
             </ul>
           </div>
