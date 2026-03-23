@@ -13,7 +13,7 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const inputDir = "public/images/original/member2";
+const inputDir = "public/images/original/member";
 const outputDir = "public/images/players";
 
 fs.mkdirSync(outputDir, { recursive: true });
