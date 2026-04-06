@@ -1,10 +1,11 @@
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
 import { Link, useSearchParams, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowLeft, Calendar, Tag, ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "../components/ImageWithFallback";
 import { newsData } from "../data/newsData";
+import { motion, AnimatePresence } from "motion/react";
 
 // 日本語日付をISO形式に変換する関数
 function convertJapaneseDateToISO(jaDate: string): string {
@@ -37,6 +38,7 @@ function convertJapaneseDateToISO(jaDate: string): string {
 export function NewsDetail() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // ページトップにスクロール
   useEffect(() => {
@@ -78,6 +80,20 @@ export function NewsDetail() {
   const backToListUrl = `/news?page=${searchParams.get("page") || "1"}&category=${
     searchParams.get("category") || "すべて"
   }`;
+
+  // 表示する画像リストを取得（imagesがある場合はそれを使用、なければimageを使用）
+  const displayImages = newsItem.images && newsItem.images.length > 0 ? newsItem.images : [newsItem.image];
+  const hasMultipleImages = displayImages.length > 1;
+
+  // スライダーの次へボタン
+  const handleNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % displayImages.length);
+  };
+
+  // スライダーの前へボタン
+  const handlePrev = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + displayImages.length) % displayImages.length);
+  };
 
   return (
     <>
@@ -125,12 +141,70 @@ export function NewsDetail() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 sm:mb-8">{newsItem.title}</h1>
             </div>
 
-            <div className="relative mb-8 sm:mb-10 lg:mb-12 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center max-h-[20rem] sm:max-h-[28rem] lg:max-h-[32rem]">
-              <ImageWithFallback
-                src={newsItem.image}
-                alt={newsItem.title}
-                className="w-full h-auto object-contain"
-              />
+            {/* 画像スライダー */}
+            <div className="relative mb-8 sm:mb-10 lg:mb-12 rounded-lg overflow-hidden bg-gray-100 group">
+              <div className="relative flex items-center justify-center max-h-[20rem] sm:max-h-[28rem] lg:max-h-[32rem]">
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={currentImageIndex}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full"
+                  >
+                    <ImageWithFallback
+                      src={displayImages[currentImageIndex]}
+                      alt={`${newsItem.title} - ${currentImageIndex + 1}枚目`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* 複数画像がある場合のみ矢印とドットを表示 */}
+              {hasMultipleImages && (
+                <>
+                  {/* 左右の矢印ボタン */}
+                  <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-4">
+                    <button
+                      onClick={handlePrev}
+                      className="bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                      aria-label="前の画像"
+                    >
+                      <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      className="bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                      aria-label="次の画像"
+                    >
+                      <ChevronRight size={20} className="sm:w-6 sm:h-6" />
+                    </button>
+                  </div>
+
+                  {/* ドット表示 */}
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                    {displayImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                          index === currentImageIndex
+                            ? "bg-white w-6"
+                            : "bg-white/50 hover:bg-white/75"
+                        }`}
+                        aria-label={`${index + 1}枚目の画像を表示`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* 画像カウンター */}
+                  <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                    {currentImageIndex + 1} / {displayImages.length}
+                  </div>
+                </>
+              )}
             </div>
 
             {newsItem.content ? (
