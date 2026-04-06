@@ -22,6 +22,20 @@ export interface ResultMatch {
 // 試合結果データ
 export const resultsData: ResultMatch[] = [
   {
+    date: "4/4",
+    dayOfWeek: "Sat.",
+    time: "13:00",
+    opponent: "山梨学院大学",
+    opponentEmblem: emblems.yamanashiGakuin,
+    location: "山梨学院向町サッカー場",
+    type: "関東大学女子サッカーリーグ",
+    category: "関東大学女子サッカーリーグ",
+    score: "1-2",
+    result: "敗北",
+    isHome: false,
+    season: "2026",
+  },
+  {
     date: "1/18",
     dayOfWeek: "Sun.",
     time: "16:30",

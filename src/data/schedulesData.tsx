@@ -3,17 +3,6 @@ import { emblems } from "./constants/emblems";
 // 試合予定データ
 export const schedulesData = [
   {
-    date: "4/4",
-    dayOfWeek: "Sat.",
-    time: "13:00",
-    opponent: "山梨学院大学",
-    opponentEmblem: emblems.yamanashiGakuin,
-    location: "山梨学院向町サッカー場",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
-  {
     date: "4/11",
     dayOfWeek: "Sat.",
     time: "13:00",
