@@ -2,17 +2,7 @@ import { emblems } from "./constants/emblems";
 
 // 試合予定データ
 export const schedulesData = [
-  {
-    date: "4/11",
-    dayOfWeek: "Sat.",
-    time: "13:00",
-    opponent: "東京国際大学",
-    opponentEmblem: emblems.tokyoKokusai,
-    location: "東京国際大学坂戸C第3グラウンド",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
+  
   {
     date: "4/18",
     dayOfWeek: "Sat.",

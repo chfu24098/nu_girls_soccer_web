@@ -22,6 +22,20 @@ export interface ResultMatch {
 // 試合結果データ
 export const resultsData: ResultMatch[] = [
   {
+    date: "4/11",
+    dayOfWeek: "Sat.",
+    time: "13:00",
+    opponent: "東京国際大学",
+    opponentEmblem: emblems.tokyoKokusai,
+    location: "東京国際大学坂戸C第3グラウンド",
+    type: "関東大学女子サッカーリーグ",
+    category: "関東大学女子サッカーリーグ",
+    score: "2-0",
+    result:"勝利",
+    isHome: false,
+    season:"2026",
+  },
+  {
     date: "4/4",
     dayOfWeek: "Sat.",
     time: "13:00",
