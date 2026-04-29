@@ -3,28 +3,7 @@ import { emblems } from "./constants/emblems";
 // 試合予定データ
 export const schedulesData = [
   
-  {
-    date: "4/18",
-    dayOfWeek: "Sat.",
-    time: "13:00",
-    opponent: "神奈川大学",
-    opponentEmblem: emblems.kanagawadai,
-    location: "神奈川大学附属中・高等学校サッカーラグビー場",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
-  {
-    date: "4/26",
-    dayOfWeek: "Sun.",
-    time: "15:00",
-    opponent: "国士館大学",
-    opponentEmblem: emblems.kokushi,
-    location: "スポーツ日大アスレティックパーク稲城",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: true,
-  },
+  
   {
     date: "5/2",
     dayOfWeek: "Sat.",
