@@ -192,8 +192,8 @@ export function Ranking() {
           </div>
 
           <div className="mt-6 text-center text-sm text-white/60">
-            <p>※ 日本大学は現在8位です</p>
-            <p className="mt-1">関東大学女子サッカーリーグ順位表（最終更新日 2026/04/06）</p>
+            <p>※ 日本大学は現在2位です</p>
+            <p className="mt-1">関東大学女子サッカーリーグ順位表（最終更新日 2026/05/11）</p>
           </div>
         </div>
       </div>

@@ -5,28 +5,6 @@ export const schedulesData = [
   
   
   {
-    date: "5/2",
-    dayOfWeek: "Sat.",
-    time: "14:00",
-    opponent: "帝京平成大学",
-    opponentEmblem: emblems.teihei,
-    location: "帝京平成大学千葉キャンパスうるいどグラウンド",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
-  {
-    date: "5/10",
-    dayOfWeek: "Sun.",
-    time: "15:00",
-    opponent: "東洋大学",
-    opponentEmblem: emblems.toyo,
-    location: "スポーツ日大アスレティックパーク稲城",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: true,
-  },
-  {
     date: "5/17",
     dayOfWeek: "Sun.",
     time: "15:00",
