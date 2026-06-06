@@ -3,40 +3,6 @@ import { emblems } from "./constants/emblems";
 // 試合予定データ
 export const schedulesData = [
   
-  
-  {
-    date: "5/17",
-    dayOfWeek: "Sun.",
-    time: "15:00",
-    opponent: "早稲田大学",
-    opponentEmblem: emblems.wasedaDai,
-    location: "スポーツ日大アスレティックパーク稲城",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: true,
-  },  
-  {
-    date: "5/23",
-    dayOfWeek: "Sat.",
-    time: "11:00",
-    opponent: "十文字学園女子大学",
-    opponentEmblem: emblems.jumonji,
-    location: "十文字学園サッカーグラウンド",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
-  {
-    date: "5/30",
-    dayOfWeek: "Sat.",
-    time: "17:00",
-    opponent: "順天堂大学",
-    opponentEmblem: emblems.junten,
-    location: "順天堂大学さくらキャンパスサッカー場",
-    type: "関東大学女子サッカーリーグ",
-    category: "関東大学女子サッカーリーグ",
-    isHome: false,
-  },
   {
     date: "6/6",
     dayOfWeek: "Sat.",
