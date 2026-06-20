@@ -23,5 +23,8 @@ export const emblems = {
   nittai: "/images/emblem/関東大学女子サッカーリーグ/日体.webp",
   tokai: "/images/emblem/関東大学女子サッカーリーグ/東海.webp",
   kokushi :"images/emblem/関東大学女子サッカーリーグ/kokushi.webp",
-  junten: "images/emblem/関東大学女子サッカーリーグ/juntendo.webp"
+  junten: "images/emblem/関東大学女子サッカーリーグ/juntendo.webp",
+  rikkyo:"images/emblem/関東大学女子サッカーリーグ/rikkyo.png",
+  nichijotai:"images/emblem/都リーグ/nichijotai.png",
+  sugiso:"images/emblem/その他/sugiso.jpg",
 };
