@@ -17,7 +17,7 @@ export function HomeSchedule() {
   const categorizeMatches = (matches: any[]) => {
     const kantoDai = matches.filter(m => m.category === "関東大学女子サッカーリーグ");
     const blossom = matches.filter(m => m.category === "Blossom League");
-    const tokyoDai = matches.filter(m => m.category === "東京都女子サッカーリーグ一般2部");
+    const tokyoDai = matches.filter(m => m.category === "東京都女子サッカーリーグ一般1部");
 
     return {
       kantoDai: kantoDai.slice(0, 3),
